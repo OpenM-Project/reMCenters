@@ -15,6 +15,7 @@ namespace MCentersNative {
 		IMAGE_DOS_HEADER DosHeader;
 		IMAGE_NT_HEADERS NtHeader;
 		IMAGE_SECTION_HEADER textSectionHeader;
+		IMAGE_SECTION_HEADER rDataSectionHeader;
 		std::vector<IMAGE_SECTION_HEADER> sectionHeaders;
 	};
 	class Utility {

@@ -148,21 +148,23 @@ namespace MCenters
                     var innerEx = ex.InnerException ?? null;
 
 
-                    var innerExceptionInfo = innerEx == null ? null : new { Type = innerEx.GetType().FullName, innerEx.HResult, innerEx.StackTrace };
+                    var innerExceptionInfo = innerEx == null ? null : new { Type = innerEx.GetType().FullName, innerEx.HResult, innerEx.StackTrace, Message = innerEx.Message };
                     var innerExceptionInfoJson = innerExceptionInfo == null ? null :
     $@"{{
           ""Type"":    ""{innerExceptionInfo.Type}"",
-       ""HResult"":    ""{innerExceptionInfo.HResult}"",
+       ""HResult"":     {innerExceptionInfo.HResult},
+       ""Message"":    ""{innerExceptionInfo.Message}"",
     ""StackTrace"":    ""{innerExceptionInfo.StackTrace}""
                     
    }}
 ";
-                    var exceptionInfo = new { Type = ex.GetType().FullName, ex.HResult, ex.StackTrace };
+                    var exceptionInfo = new { Type = ex.GetType().FullName, ex.HResult, ex.StackTrace, Message=ex.Message };
                     var clipboardMessage =
     $@"```json
 {{
           ""Type"":    ""{exceptionInfo.Type}"",
-       ""HResult"":    ""{exceptionInfo.HResult}"",
+       ""HResult"":     {exceptionInfo.HResult},
+       ""Message"":    ""{exceptionInfo.Message}""
     ""StackTrace"":    ""{exceptionInfo.StackTrace}"",
 ""InnerException"":    ""{innerExceptionInfoJson}""                
 }}
@@ -215,25 +217,27 @@ namespace MCenters
                     var innerEx = ex.InnerException ?? null;
 
 
-                    var innerExceptionInfo = innerEx == null ? null : new { Type = innerEx.GetType().FullName, innerEx.HResult, innerEx.StackTrace };
+                    var innerExceptionInfo = innerEx == null ? null : new { Type = innerEx.GetType().FullName, innerEx.HResult, innerEx.StackTrace, Message=innerEx.Message };
                     var innerExceptionInfoJson = innerExceptionInfo == null ? null :
     $@"{{
-          ""Type"":    {innerExceptionInfo.Type},
+          ""Type"":    ""{innerExceptionInfo.Type}"",
        ""HResult"":    {innerExceptionInfo.HResult},
-    ""StackTrace"":    {innerExceptionInfo.StackTrace}
+       ""Message"":    ""{innerExceptionInfo.Message}"",
+    ""StackTrace"":    ""{innerExceptionInfo.StackTrace}""
                     
    }}
 ";
-                    var exceptionInfo = new { Type = ex.GetType().FullName, ex.HResult, ex.StackTrace };
+                    var exceptionInfo = new { Type = ex.GetType().FullName, ex.HResult, ex.StackTrace, Message=ex.Message };
                     var clipboardMessage =
     $@"```json
 {{
-          ""Type"":    {exceptionInfo.Type},
+          ""Type"":    ""{exceptionInfo.Type}"",
        ""HResult"":    {exceptionInfo.HResult},
-    ""StackTrace"":    {exceptionInfo.StackTrace},
-""InnerException"":    {innerExceptionInfoJson}                
+       ""Message"":    ""{exceptionInfo.Message}""
+    ""StackTrace"":    ""{exceptionInfo.StackTrace}"",
+""InnerException"":    ""{innerExceptionInfoJson}""                
 }}
-";
+```";
                     Screens.ErrorScreen.CancelClicked += (s, eventE) =>
                     {
                         ShouldRetry = false;

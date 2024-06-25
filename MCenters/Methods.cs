@@ -628,9 +628,8 @@ namespace MCenters
                 if (File.Exists(path))
                 {
                     var executor = "takeown.exe";
-                    var arguments= $"/f {path}";
+                    var arguments= $"/f {path} /A";
                 takeperms:;
-                    var icaclsCmd = $"icacls {path} /grant \"{Environment.UserName}\":F";
                     var Info = new ProcessStartInfo(executor, arguments)
                     {
                         CreateNoWindow= true,
@@ -677,7 +676,7 @@ namespace MCenters
                     if (executor == "takeown.exe")
                     {
                         executor = $"icacls.exe";
-                        arguments = $"{path} /grant \"{Environment.UserName}\":F";
+                        arguments = $"{path} /grant Administrators:F";
                         goto takeperms;
                     }
                     Logger.CompleteOperation("Taking Permissions of " + path);
@@ -700,7 +699,7 @@ namespace MCenters
 
                 var userDomain = Environment.UserDomainName;
                 var userName = Environment.UserName;
-                if (fileOwner == userDomain + "\\" + userName)
+                if (fileOwner == "BUILTIN\\Administrators")
                 {
 
 
@@ -719,10 +718,6 @@ namespace MCenters
             {
 
                 Logger.StartOperation("Delete " + path);
-                
-                try
-                {
-
                     Process[] p = Process.GetProcesses();
                     foreach (var item in p)
                     {
@@ -757,20 +752,6 @@ namespace MCenters
                     Logger.Write("File Deleted");
                     Logger.CompleteOperation("Delete " + path);
                     return true;
-                }
-                catch (UnauthorizedAccessException)
-                {
-
-                }
-                catch (IOException)
-                {
-                }
-                catch (ArgumentException)
-                {
-                }
-                Logger.CompleteOperation("Delete " + path);
-                return false;
-
             }
             void Replace(string Path, bool Is64)
             {

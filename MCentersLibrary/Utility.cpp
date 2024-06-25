@@ -94,6 +94,16 @@ namespace MCentersNative {
 			}
 		}
 		if (!found) return nullptr;
+		found = false;
+		for (int i = 0; i < numberOfSections; ++i) {
+			IMAGE_SECTION_HEADER section = (*sectionHeaders)[i];
+			if (std::strcmp(reinterpret_cast<char*>(section.Name), ".rdata") == 0) {
+				found = true;
+				record->rDataSectionHeader = section;
+				break;
+			}
+		}
+		if (!found) return nullptr;
 		return record;
 	}
 	
