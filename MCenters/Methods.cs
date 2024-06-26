@@ -676,7 +676,7 @@ namespace MCenters
                     if (executor == "takeown.exe")
                     {
                         executor = $"icacls.exe";
-                        arguments = $"{path} /grant Administrators:F";
+                        arguments = $"{path} /grant  *S-1-5-32-544:F";
                         goto takeperms;
                     }
                     Logger.CompleteOperation("Taking Permissions of " + path);
@@ -695,11 +695,8 @@ namespace MCenters
                     return true;
 
                 var accessControl = new FileInfo(path).GetAccessControl();
-                var fileOwner = accessControl.GetOwner(typeof(NTAccount)).Value;
-
-                var userDomain = Environment.UserDomainName;
-                var userName = Environment.UserName;
-                if (fileOwner == "BUILTIN\\Administrators")
+                var fileOwner = accessControl.GetOwner(typeof(SecurityIdentifier)).Value;
+                if (fileOwner == "S-1-5-32-544")
                 {
 
 
