@@ -77,20 +77,34 @@ namespace MCentersNative {
 
 				return false;
 			}
+			std::vector<char> textBuffer;
+			std::vector<char> rDataBuffer;
+			IMAGE_SECTION_HEADER* textHeader;
+			IMAGE_SECTION_HEADER* rDataHeader;
+			auto recordPex64= MCentersNative::Utility::GetRecordPEx64(file);
+			
+			if (recordPex64 == nullptr) goto exit;
+			 
+			textHeader = &recordPex64->textSectionHeader;
+			rDataHeader = &recordPex64->rDataSectionHeader;
 
-			file.seekg(0, std::ios::end); // moving to end to help determine file size
-			std::streamsize size = file.tellg();
-			file.seekg(0, std::ios::beg);
+			textBuffer.resize(textHeader->SizeOfRawData);
+			rDataBuffer.resize(rDataHeader->SizeOfRawData);
 
-			std::vector<char> fileBuffer(size);
+			file.seekg(textHeader->PointerToRawData, std::ios::beg);
+			if (!file.read(textBuffer.data(), textBuffer.size()))  goto exit;
 
-			if (!file.read(fileBuffer.data(), size)) goto exit;
+			file.seekg(rDataHeader->PointerToRawData, std::ios::beg);
+			if (!file.read(rDataBuffer.data(), rDataBuffer.size()))  goto exit;
 			else {
+				auto textBaseAddress = recordPex64->NtHeader.OptionalHeader.ImageBase + textHeader->VirtualAddress;
+				auto rDataBaseAddress = recordPex64->NtHeader.OptionalHeader.ImageBase + rDataHeader->VirtualAddress;
 
 				// windows service store part
 
-				auto storeApplicenseGetTrialKeywordPosition = MCentersNative::Utility::find_pattern_in_array(fileBuffer.data(), Windows_Services_Store_StoreApplicense_getTrial_keyword, fileBuffer.size(), 55);
+				auto storeApplicenseGetTrialKeywordPosition = MCentersNative::Utility::find_pattern_in_array(rDataBuffer.data(), Windows_Services_Store_StoreApplicense_getTrial_keyword, rDataBuffer.size(), 55);
 				if (storeApplicenseGetTrialKeywordPosition != -1) {
+					storeApplicenseGetTrialKeywordPosition += rDataBaseAddress;
 					size_t storeApplicenseGetTrialKeywordReferenceOffset = 0;
 
 
@@ -98,27 +112,27 @@ namespace MCentersNative {
 					int offsetInLea = 0;
 					char* leaOffsetter = reinterpret_cast<char*>(&offsetInLea);
 					while (true) {
-						storeApplicenseGetTrialKeywordReferenceOffset = MCentersNative::Utility::find_pattern_in_array(fileBuffer.data(), x64LeaReferenceOpcodePrefix, fileBuffer.size(), 3, storeApplicenseGetTrialKeywordReferenceOffset + 1);
+						storeApplicenseGetTrialKeywordReferenceOffset = MCentersNative::Utility::find_pattern_in_array(textBuffer.data(), x64LeaReferenceOpcodePrefix, textBuffer.size(), 3, storeApplicenseGetTrialKeywordReferenceOffset + 1);
 						if (storeApplicenseGetTrialKeywordReferenceOffset == -1) goto exit;
 						auto startOffset = storeApplicenseGetTrialKeywordReferenceOffset + SizeOfx64LeaOpcodeWithoutMemoryOffset;
-						if (startOffset + 4 > fileBuffer.size())goto exit;
-						leaOffsetter[0] = fileBuffer[startOffset];
-						leaOffsetter[1] = fileBuffer[startOffset+1];
-						leaOffsetter[2] = fileBuffer[startOffset+2];
-						leaOffsetter[3] = fileBuffer[startOffset+3];
+						if (startOffset + 4 > textBuffer.size())goto exit;
+						leaOffsetter[0] = textBuffer[startOffset];
+						leaOffsetter[1] = textBuffer[startOffset+1];
+						leaOffsetter[2] = textBuffer[startOffset+2];
+						leaOffsetter[3] = textBuffer[startOffset+3];
 
 						
-						if (storeApplicenseGetTrialKeywordReferenceOffset + offsetInLea + SizeOfx64LeaOpcode == storeApplicenseGetTrialKeywordPosition) {
+						if (textBaseAddress + storeApplicenseGetTrialKeywordReferenceOffset + offsetInLea + SizeOfx64LeaOpcode == storeApplicenseGetTrialKeywordPosition) {
 
 
-							auto dataStartPoint = fileBuffer.data() + storeApplicenseGetTrialKeywordReferenceOffset;
-							size_t size = storeApplicenseGetTrialKeywordReferenceOffset + 0x200 > fileBuffer.size() ?
-								fileBuffer.size() - storeApplicenseGetTrialKeywordReferenceOffset :
+							auto dataStartPoint = textBuffer.data() + storeApplicenseGetTrialKeywordReferenceOffset;
+							size_t size = storeApplicenseGetTrialKeywordReferenceOffset + 0x200 > textBuffer.size() ?
+								textBuffer.size() - storeApplicenseGetTrialKeywordReferenceOffset :
 								0x200;
 							// The runtime address (instruction pointer) was chosen arbitrarily here in order to better 
 							// visualize relative addressing. In your actual program, set this to e.g. the memory address 
 							// that the code being disassembled was read from. 
-							ZyanU64 runtime_address = storeApplicenseGetTrialKeywordReferenceOffset;
+							ZyanU64 runtime_address = storeApplicenseGetTrialKeywordReferenceOffset+textHeader->PointerToRawData;
 
 							// Loop over the instructions in our buffer. 
 							ZyanUSize offset = 0;
@@ -152,38 +166,39 @@ namespace MCentersNative {
 
 
 				// windows application model store part
-				auto licenseInformationServerGetTrialKeywordPosition = MCentersNative::Utility::find_pattern_in_array(fileBuffer.data(), Windows_ApplicationModel_Store_LicenseInformationServer_getTrial_keyword, fileBuffer.size(), 72);
+				auto licenseInformationServerGetTrialKeywordPosition = MCentersNative::Utility::find_pattern_in_array(rDataBuffer.data(), Windows_ApplicationModel_Store_LicenseInformationServer_getTrial_keyword, rDataBuffer.size(), 72);
 				if (licenseInformationServerGetTrialKeywordPosition == -1) goto exit; // no dll will be missing this value so we have an error in dll and we must exit
 				size_t licenseInformationServerGetTrialKeywordReferenceOffset = 0;
+				licenseInformationServerGetTrialKeywordPosition += rDataBaseAddress;
 
 
 
 				int offsetInLea = 0;
 				char* leaOffsetter = reinterpret_cast<char*>(&offsetInLea);
 				while (true) {
-					licenseInformationServerGetTrialKeywordReferenceOffset = MCentersNative::Utility::find_pattern_in_array(fileBuffer.data(), x64LeaReferenceOpcodePrefix, fileBuffer.size(), 3, licenseInformationServerGetTrialKeywordReferenceOffset + 1);
+					licenseInformationServerGetTrialKeywordReferenceOffset = MCentersNative::Utility::find_pattern_in_array(textBuffer.data(), x64LeaReferenceOpcodePrefix, textBuffer.size(), 3, licenseInformationServerGetTrialKeywordReferenceOffset + 1);
 					if (licenseInformationServerGetTrialKeywordReferenceOffset == -1) goto exit;
 
 					auto startOffset = licenseInformationServerGetTrialKeywordReferenceOffset + SizeOfx64LeaOpcodeWithoutMemoryOffset;
-					if (startOffset + 4 > fileBuffer.size())goto exit;
-					leaOffsetter[0] = fileBuffer[startOffset];
-					leaOffsetter[1] = fileBuffer[startOffset + 1];
-					leaOffsetter[2] = fileBuffer[startOffset + 2];
-					leaOffsetter[3] = fileBuffer[startOffset + 3];
+					if (startOffset + 4 > textBuffer.size())goto exit;
+					leaOffsetter[0] = textBuffer[startOffset];
+					leaOffsetter[1] = textBuffer[startOffset + 1];
+					leaOffsetter[2] = textBuffer[startOffset + 2];
+					leaOffsetter[3] = textBuffer[startOffset + 3];
 
 					
-					if (licenseInformationServerGetTrialKeywordReferenceOffset + offsetInLea + SizeOfx64LeaOpcode == licenseInformationServerGetTrialKeywordPosition) {
+					if (textBaseAddress+ licenseInformationServerGetTrialKeywordReferenceOffset + offsetInLea + SizeOfx64LeaOpcode == licenseInformationServerGetTrialKeywordPosition) {
 
 
-						auto dataStartPoint = fileBuffer.data() + licenseInformationServerGetTrialKeywordReferenceOffset;
-						size_t size = licenseInformationServerGetTrialKeywordReferenceOffset + 0x200 > fileBuffer.size() ?
-							fileBuffer.size() - licenseInformationServerGetTrialKeywordReferenceOffset :
+						auto dataStartPoint = textBuffer.data() + licenseInformationServerGetTrialKeywordReferenceOffset;
+						size_t size = licenseInformationServerGetTrialKeywordReferenceOffset + 0x200 > textBuffer.size() ?
+							textBuffer.size() - licenseInformationServerGetTrialKeywordReferenceOffset :
 							0x200;
 
 						// The runtime address (instruction pointer) was chosen arbitrarily here in order to better 
 						// visualize relative addressing. In your actual program, set this to e.g. the memory address 
 						// that the code being disassembled was read from. 
-						ZyanU64 runtime_address = licenseInformationServerGetTrialKeywordReferenceOffset;
+						ZyanU64 runtime_address = licenseInformationServerGetTrialKeywordReferenceOffset+textHeader->PointerToRawData;
 
 						// Loop over the instructions in our buffer. 
 						ZyanUSize offset = 0;
