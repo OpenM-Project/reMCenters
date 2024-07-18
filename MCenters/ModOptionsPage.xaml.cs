@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -26,6 +26,7 @@ namespace MCenters
         (string Title, string Description, string LearnMoreLink) DllMethodNonPermanentResources = ( "DLL Method (Auto-Patch, Non-Permanent)",  "This method is the same as DLL Method Auto-Patch except that it now doesn't modify system files and is non-permanent, since it creates a cracked version of DLLs like DLL Method Auto-Patch, but injects into the Minecraft process, instead of replacing system DLLs.", "https://mcenters.net/Methods/DLL-Method-Non-Permanent/");
         (string Title, string Description, string LearnMoreLink) MCenters5Resources = ( "Memory Injection", "This method uses the method that was used previously in M Centers 5.0, this method only works on newer minecraft versions starting from 1.19.20 and later, while being non-permanent, being one of the safest methods that exist. ", "https://mcenters.net/Methods/M-Centers-5/");
         (string Title, string Description, string LearnMoreLink) HookMethodResources = ( "DLL Hooking Method", "This method is non-permanent and makes use of debugging and hooking into the Minecraft process to unlock the game without modifying any system files.", "https://mcenters.net/Methods/DLL-Hook-Method/");
+        
         SolidColorBrush DefaultBackground;
         SolidColorBrush ActiveBackground;
         HoverableButton ActiveButton;
