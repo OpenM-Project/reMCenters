@@ -1,7 +1,7 @@
 name: M Centers 8.0 x64/x86 Builds
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   x64:
