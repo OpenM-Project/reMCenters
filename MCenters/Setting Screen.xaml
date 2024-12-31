@@ -41,7 +41,7 @@
                 <RowDefinition Height="30*"/>
                 <RowDefinition Height="148*"/>
             </Grid.RowDefinitions>
-            <CheckBox x:Name="thirdPartyCheckBox" Content="Enable third party cracked dlls providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3"/>
+            <CheckBox x:Name="thirdPartyCheckBox" Content="Enable third party cracked dlls providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3" Checked="thirdPartyCheckBox_Checked"/>
 
             <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="10" Background="#FFDED3D3" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
                 <fw:AcrylicPanel.BindingGroup>
@@ -167,7 +167,7 @@
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="discordIcon" Margin="30,10,30,25" Source="/images/discord_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="4"/>
-            <local:HoverableButton OpacityMask="Magenta" x:Name="youtubeButton" fw:RevealElement.BorderRadius="10" Content="Youtube"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="YoutubeButton_Click" >
+            <local:HoverableButton OpacityMask="Magenta" x:Name="youtubeButton" fw:RevealElement.BorderRadius="10" Content="YouTube"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="YoutubeButton_Click" >
                 <fw:RevealElement.MouseOverBackground>
                     <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>

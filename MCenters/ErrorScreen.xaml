@@ -17,7 +17,7 @@
         <TextBlock x:Name="errorTitle" HorizontalAlignment="Left" Height="41" Margin="82,31,0,0" Text="Error Title" TextWrapping="Wrap" VerticalAlignment="Top" Width="693" Style="{DynamicResource TitleTextBlockStyle}"/>
         <TextBlock x:Name="errorDescription" Margin="82,168,25,117" Text="Error Details" TextWrapping="Wrap" Style="{DynamicResource BodyTextBlockStyle}"/>
         <TextBlock x:Name="errorLine" HorizontalAlignment="Left" Height="86" Margin="94,77,0,0" Text="Error Line" TextWrapping="Wrap" VerticalAlignment="Top" Width="681" Style="{DynamicResource SubtitleTextBlockStyle}" FontSize="12"/>
-        <local:HoverableButton x:Name="copyButton" fw:RevealElement.BorderRadius="10"  Content="Copy to ClipBoard" Margin="565,331,25,43" Style="{DynamicResource ButtonRoundRevealStyle}" VerticalContentAlignment="Bottom" OpacityMask="Magenta" Click="CopyButton_Click"  >
+        <local:HoverableButton x:Name="copyButton" fw:RevealElement.BorderRadius="10"  Content="Copy to clipboard" Margin="565,331,25,43" Style="{DynamicResource ButtonRoundRevealStyle}" VerticalContentAlignment="Bottom" OpacityMask="Magenta" Click="CopyButton_Click"  >
             <fw:RevealElement.MouseOverBackground>
                 <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>

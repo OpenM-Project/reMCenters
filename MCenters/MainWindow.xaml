@@ -42,7 +42,7 @@
             <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
 
-        <local:HoverableButton x:Name="installButton" IsEnabled="{Binding  Source={x:Static local:Screens.UninstallScreen }, Path=ButtonEnabled}" Style="{DynamicResource ButtonRoundRevealStyle}" Content="Install Hack" Grid.Row="2" MinWidth="163" MinHeight="65" VerticalContentAlignment="Bottom" OpacityMask="Magenta"  
+        <local:HoverableButton x:Name="installButton" IsEnabled="{Binding  Source={x:Static local:Screens.UninstallScreen }, Path=ButtonEnabled}" Style="{DynamicResource ButtonRoundRevealStyle}" Content="Install Mod" Grid.Row="2" MinWidth="163" MinHeight="65" VerticalContentAlignment="Bottom" OpacityMask="Magenta"  
                 fw:RevealElement.BorderRadius="20" Margin="2,0,2,0"  Click="InstallButton_Click"
                
                 >
@@ -54,7 +54,7 @@
             </Button.Background>
 
         </local:HoverableButton>
-        <local:HoverableButton x:Name="uninstallButton" IsEnabled="{Binding  Source={x:Static local:Screens.InstallScreen }, Path=ButtonEnabled}" Style="{DynamicResource ButtonRoundRevealStyle}" Content="Uninstall Hack" Grid.Column="1" Grid.Row="2" MinWidth="163" MinHeight="65" VerticalContentAlignment="Bottom"   OpacityMask="Magenta"
+        <local:HoverableButton x:Name="uninstallButton" IsEnabled="{Binding  Source={x:Static local:Screens.InstallScreen }, Path=ButtonEnabled}" Style="{DynamicResource ButtonRoundRevealStyle}" Content="Undo All Mod" Grid.Column="1" Grid.Row="2" MinWidth="163" MinHeight="65" VerticalContentAlignment="Bottom"   OpacityMask="Magenta"
                 fw:RevealElement.BorderRadius="20" Margin="2,0,2,0" Click="UninstallButton_Click" 
                 
                 >

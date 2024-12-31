@@ -96,6 +96,9 @@ namespace MCenters
 
         }
 
+        private void thirdPartyCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
