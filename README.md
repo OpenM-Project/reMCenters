@@ -49,8 +49,8 @@ my-folder/                         # Root directory.
 ```
 ## Contributors
 
- <a href = "https://github.com/tinedpakgamer/M-Centers-8.0/graphs/contributors">
-   <img src = "https://contrib.rocks/image?repo=tinedpakgamer/M-Centers-8.0"/>
+ <a href = "https://github.com/OpenM-Project/reMCenters/graphs/contributors">
+   <img src = "https://contrib.rocks/image?repo=OpenM-Project/reMCenters"/>
  </a>
 
 ## [M Centers 8.0] License
