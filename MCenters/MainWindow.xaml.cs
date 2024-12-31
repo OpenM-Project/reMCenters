@@ -38,7 +38,7 @@ namespace MCenters
             CurrentVersion = versionInfo.FileVersion;
             ResourceDictionaryEx.GlobalTheme = ElementTheme.Light;
             InitializeComponent();
-            Title = $"M Centers {versionInfo.FileMajorPart}.{versionInfo.FileMinorPart} Continued";
+            Title = $"reMCenters {versionInfo.FileMajorPart}.{versionInfo.FileMinorPart} Beta";
             
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.RealTime;
             Screens.SettingsScreen = new Setting_Screen();
@@ -108,7 +108,7 @@ namespace MCenters
 
                 try
                 {
-                    var invoker=client.GetAsync("https://raw.githubusercontent.com/misike12/M-Centers-8.0/master/CurrentVersion.txt");
+                    var invoker=client.GetAsync("https://raw.githubusercontent.com/OpenM-Project/reMCenters/master/CurrentVersion.txt");
                     invoker.Wait();
                     var result=invoker.Result;
                     if (!result.IsSuccessStatusCode) return;
@@ -121,7 +121,7 @@ namespace MCenters
                         Dispatcher.Invoke(() =>
                         {
 
-                            Screens.ShowDialog("Update Available", $"Version {versionOnNet.ToString()} is now available for download.", "Later", "Download Now", () => Functions.OpenBrowser("https://github.com/misike12/M-Centers-8.0/releases"), null);
+                            Screens.ShowDialog("Update Available", $"Version {versionOnNet.ToString()} is now available for download.", "Later", "Download Now", () => Functions.OpenBrowser("https://github.com/OpenM-Project/reMCenters/releases"), null);
                         });
 
                     }
