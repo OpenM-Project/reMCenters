@@ -1,4 +1,4 @@
-<h1 align='center'>M Centers</h1>
+<h1 align='center'>reMCenters</h1>
 <p align='center'>
   <img src='https://github.com/OpenM-Project/reMCenters/blob/master/MCenters/images/mcenter_5_icon.png?raw=true' alt='M Centers Icon' width="30%">
 </p>
@@ -53,9 +53,9 @@ my-folder/                         # Root directory.
    <img src = "https://contrib.rocks/image?repo=OpenM-Project/reMCenters"/>
  </a>
 
-## [M Centers 8.0] License
+## [reMCenters] License
 
-This license applies to [M Centers 8.0].
+This license applies to [reMCenters].
 
 1. ### Grant of Rights
    - You are granted permission to view and use this project for personal, non-commercial purposes only.
