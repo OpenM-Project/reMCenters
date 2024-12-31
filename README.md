@@ -31,7 +31,8 @@
 - [Download](https://visualstudio.microsoft.com/) Visual Studio 2022
 - Download and install .Net Desktop Development Workload in Visual Studio 2022
 - Open 'M Centers 8.0.sln' file with Visual Studio
-- Click build
+- Add `https://api.nuget.org/v3/index.json` as a Nuget Package Source in the Options
+- Click 'Start' on the toolbar to build it
 
 ### Folder structure of the compiled program 
 ```
