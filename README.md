@@ -72,4 +72,4 @@ This license applies to [M Centers 8.0].
   - This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any terms of this license. Upon termination, you must cease all use and destroy all copies of the project.
 
 5. ### Disclaimer of Warranty
-  - The project is provided "as-is" without any warranties of any kind, either express or implied.
+  - The project is provided "as is" without any warranties of any kind, either express or implied.
