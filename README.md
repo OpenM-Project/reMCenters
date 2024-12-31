@@ -1,6 +1,6 @@
 <h1 align='center'>M Centers</h1>
 <p align='center'>
-  <img src='https://github.com/misike12/M-Centers-8.0/blob/master/MCenters/images/mcenter_5_icon.png?raw=true' alt='M Centers Icon' width="30%">
+  <img src='https://github.com/OpenM-Project/reMCenters/blob/master/MCenters/images/mcenter_5_icon.png?raw=true' alt='M Centers Icon' width="30%">
 </p>
 
 <p align='center'>A multi-method &amp; WIP unlocker for <em><a href="ms-windows-store://pdp/?ProductId=9NBLGGH2JHXJ">Minecraft for Windows</a></em>
