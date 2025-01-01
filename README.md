@@ -40,7 +40,7 @@
 my-folder/                         # Root directory.
 |- FluentWPF.dll                   # DLL file for FluentWPF library
 |- M-Centers.exe                   # Main executable
-|- M-Centers.exe.config           # Config file for M-Centers.exe
+|- M-Centers.exe.config            # Config file for M-Centers.exe
 |- M Centers.pdb                   # PDB file for M Centers
 |- MaterialDesignColors.dll        # DLL file for MaterialDesignColors library
 |- MaterialDesignThemes.Wpf.dll    # DLL file for MaterialDesignThemes.Wpf library
