@@ -5,7 +5,7 @@
 </p>
 <p>A multi-method &amp; WIP unlocker for <em><a href="ms-windows-store://pdp/?ProductId=9NBLGGH2JHXJ">Minecraft for Windows</a></em>
 </p>
-<div>
+</div>
 
 ## Usage
 
