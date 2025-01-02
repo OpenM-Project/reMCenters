@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: M-Centers-8.0-Release x64
-        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCenters\bin\x64\Release\
+        path: D:\a\reMCenters\reMCenters\MCenters\bin\x64\Release\
   x86:
     runs-on: windows-latest
 
@@ -49,4 +49,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: M-Centers-8.0-Release x86
-        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCenters\bin\x86\Release\
+        path: D:\a\reMCenters\reMCenters\MCenters\bin\x86\Release\
