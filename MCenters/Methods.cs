@@ -37,7 +37,7 @@ namespace MCenters
             }
 
 
-            public static string ClipboardFolder = "C:\\ProgramData\\MCenters\\Clipboard\\";
+            public static string ClipboardFolder = "C:\\ProgramData\\reMCenters\\Clipboard\\";
 
             
 
@@ -62,7 +62,7 @@ namespace MCenters
         }
         public class ExeMethod : Method
         {
-            public static string baseExePath = "C:\\ProgramData\\MCenters\\Methods\\Exe";
+            public static string baseExePath = "C:\\ProgramData\\reMCenters\\Methods\\Exe";
             public ExeMethod(string version)
             {
                 throw new NotImplementedException("Exe Method not implemented");
@@ -78,14 +78,14 @@ namespace MCenters
 
 
             
-            public static string baseDllPath = "C:\\ProgramData\\MCenters\\Methods\\Dll";
-            public static string Dllx64AutoPatch = "C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x64\\Windows.ApplicationModel.Store.dll";
-            public static string Dllx86AutoPatch = "C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x86\\Windows.ApplicationModel.Store.dll";
-            public static string Dllx64AutoPatchDir = "C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x64";
-            public static string Dllx86AutoPatchDir = "C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x86";
+            public static string baseDllPath = "C:\\ProgramData\\reMCenters\\Methods\\Dll";
+            public static string Dllx64AutoPatch = "C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x64\\Windows.ApplicationModel.Store.dll";
+            public static string Dllx86AutoPatch = "C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x86\\Windows.ApplicationModel.Store.dll";
+            public static string Dllx64AutoPatchDir = "C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x64";
+            public static string Dllx86AutoPatchDir = "C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x86";
             public static string Dllx64 = "C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll";
             public static string Dllx86 = "C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll";
-            public static string baseThirdPartyPath = "C:\\ProgramData\\MCenters\\Methods\\ThirdPartyDlls";
+            public static string baseThirdPartyPath = "C:\\ProgramData\\reMCenters\\Methods\\ThirdPartyDlls";
 
             public string SelectedProviderName = "tinedpakgamer";
             string SelectedPath = "";

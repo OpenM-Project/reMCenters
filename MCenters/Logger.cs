@@ -11,7 +11,7 @@ namespace MCenters
     internal static class Logger
     {
         static  MCentersFileStream logWriter;
-        public static  string  LogDirectory = "C:\\ProgramData\\MCenters\\Logs\\";
+        public static  string  LogDirectory = "C:\\ProgramData\\reMCenters\\Logs\\";
         public static  string LogFileName = "log.txt";
         
         public static string LogPath { get; private set; }

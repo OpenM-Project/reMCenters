@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
-public enum ModOptions{ DllMethodOnline,DllMethodAutoPatch,DllMethodAutoPatchNonPermanent,MCenters5,HookMethod}
+public enum ModOptions{ DllMethodAutoPatch,DllMethodOnline,DllMethodAutoPatchNonPermanent,MCenters5,HookMethod}
 
 public class Config
 {
-    private static readonly string ConfigFilePath = "C:\\ProgramData\\MCenters\\config.xml";
+    private static readonly string ConfigFilePath = "C:\\ProgramData\\reMCenters\\config.xml";
 
     public ModOptions SelectedMod { get; set; }
     private static Config ConfigCache;

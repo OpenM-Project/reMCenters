@@ -72,7 +72,7 @@ namespace MCentersNative {
 			bool result = false;
 			if (!MCentersNative::Utility::IsLittleEndian()) return false;  // this line ensures code only runs when running in little endian mode, we dont support big endian for now
 
-			std::fstream file("C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x64\\Windows.ApplicationModel.Store.dll", std::ios::in | std::ios::out | std::ios::binary);
+			std::fstream file("C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x64\\Windows.ApplicationModel.Store.dll", std::ios::in | std::ios::out | std::ios::binary);
 			if (!file) {
 
 				return false;
@@ -259,7 +259,7 @@ namespace MCentersNative {
 			bool result = false;
 			if (!MCentersNative::Utility::IsLittleEndian()) return false;
 
-			std::fstream file("C:\\ProgramData\\MCenters\\Methods\\AutoPatch\\x86\\Windows.ApplicationModel.Store.dll", std::ios::in | std::ios::out | std::ios::binary);
+			std::fstream file("C:\\ProgramData\\reMCenters\\Methods\\AutoPatch\\x86\\Windows.ApplicationModel.Store.dll", std::ios::in | std::ios::out | std::ios::binary);
 			if (!file) {
 
 				return false;
