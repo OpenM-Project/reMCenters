@@ -1,0 +1,181 @@
+﻿<Page x:Class="reMCenters.Setting_Screen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:reMCenters"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Setting_Screen" Width="800" Height="450">
+    <Page.Resources>
+        <local:Setting_Screen x:Key="myDataSource"/>
+    </Page.Resources>
+
+    <Grid fw:PointerTracker.Enabled="True" Width="800" Height="450">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="780*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Margin="20,0,0,0" Grid.Row="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="447*"/>
+                <ColumnDefinition Width="214*"/>
+                <ColumnDefinition Width="99*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="31*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="148*"/>
+            </Grid.RowDefinitions>
+            <CheckBox x:Name="thirdPartyCheckBox" Content="Enable third party cracked dlls providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3" Checked="thirdPartyCheckBox_Checked"/>
+
+            <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="10" Background="#FFDED3D3" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
+                <fw:AcrylicPanel.BindingGroup>
+                    <BindingGroup/>
+                </fw:AcrylicPanel.BindingGroup>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="18*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="51*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="104*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="thirdPartyTextBox" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxLines="3" Grid.ColumnSpan="3" CharacterCasing="Lower" TextWrapping="Wrap" Grid.Row="1" />
+                    <local:HoverableButton Margin="10,0" OpacityMask="Magenta" x:Name="addButton" fw:RevealElement.BorderRadius="10" Content="Add"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom"  Grid.Column="4" Click="AddButton_Click"   Grid.Row="1" Grid.RowSpan="2">
+                        <fw:RevealElement.MouseOverBackground>
+                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                        </fw:RevealElement.MouseOverBackground>
+                        <local:HoverableButton.Background>
+                            <SolidColorBrush Color="#80808080" Opacity="0"/>
+                        </local:HoverableButton.Background>
+                    </local:HoverableButton>
+                    <Image x:Name="addIcon" Margin="25,10,25,25" Source="/images/add_icon.png" IsHitTestVisible="False" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" />
+                    <local:HoverableButton OpacityMask="Magenta" x:Name="viewButton" fw:RevealElement.BorderRadius="10" Content="View Providers"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="3" Click="ViewButton_Click" Grid.Column="1"  >
+                        <fw:RevealElement.MouseOverBackground>
+                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                        </fw:RevealElement.MouseOverBackground>
+                        <local:HoverableButton.Background>
+                            <SolidColorBrush Color="#80808080" Opacity="0"/>
+                        </local:HoverableButton.Background>
+                    </local:HoverableButton>
+
+                    <Image x:Name="viewIcon" Margin="20" Source="/images/view_providers.png" IsHitTestVisible="False" Grid.Row="3" Grid.Column="1"/>
+                    <TextBlock x:Name="thirdPartyManagementStatus" Grid.Column="3" Grid.ColumnSpan="2"  Grid.Row="3"   Text="TextBlock" LineStackingStrategy="BlockLineHeight" TextTrimming="CharacterEllipsis"/>
+                </Grid>
+            </fw:AcrylicPanel>
+            <local:HoverableButton OpacityMask="Magenta" x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Column="2" Grid.RowSpan="2" Click="BackButton_Click">
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="backIcon" Margin="15,5,15,25" Source="/images/back_icon.png" IsHitTestVisible="False" Grid.Column="2" Grid.RowSpan="2"/>
+        </Grid>
+
+        <Grid Grid.Row="4" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="466*"/>
+                <ColumnDefinition Width="157*"/>
+            </Grid.ColumnDefinitions>
+            <local:HoverableButton OpacityMask="Magenta" x:Name="dllButton" fw:RevealElement.BorderRadius="10" Content="Open Dlls folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllButton_Click" >
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="dllIcon" Margin="20" Source="/images/dll_folder_icon.png"  IsHitTestVisible="False"/>
+
+            <local:HoverableButton Grid.Column="2" OpacityMask="Magenta" x:Name="logsFolderButton" fw:RevealElement.BorderRadius="10"  Content="Logs Folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="ErrorButton_Click" >
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+
+            <Image x:Name="logsFolderIcon" Margin="20" Source="/images/error_records_icon.png" IsHitTestVisible="False" Grid.Column="2"/>
+        </Grid>
+        <GridSplitter  Height="3" VerticalAlignment="Center" Width="810" Style="{DynamicResource MaterialDesignGridSplitter}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center"  />
+        <Grid Grid.Column="1" Grid.Row="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="132*"/>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="157*"/>
+            </Grid.ColumnDefinitions>
+            <local:HoverableButton OpacityMask="Magenta"   x:Name="agreementButton"  fw:RevealElement.BorderRadius="10"  Content="Agreement"  Style="{DynamicResource ButtonRoundAccentRevealStyle}"  Grid.Row="1" Grid.Column="2" Click="AgreementButton_Click" Grid.ColumnSpan="1" VerticalContentAlignment="Bottom">
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="agreementIcon"   Source="/images/agreement_icon.png" IsHitTestVisible="False" Grid.Row="1" Grid.Column="2" Margin="30,10,30,25"/>
+            <local:HoverableButton OpacityMask="Magenta" x:Name="policyButton" fw:RevealElement.BorderRadius="10" Content="Privacy Policy" Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1"  Click="PolicyButton_Click" >
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="policyIcon" Margin="30,10,30,25" Source="/images/privacy_policy_icon.png" IsHitTestVisible="False" Grid.Row="1"/>
+            <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="4" Click="DiscordButton_Click"  >
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="discordIcon" Margin="30,10,30,25" Source="/images/discord_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="4"/>
+            <local:HoverableButton OpacityMask="Magenta" x:Name="youtubeButton" fw:RevealElement.BorderRadius="10" Content="YouTube"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="YoutubeButton_Click" >
+                <fw:RevealElement.MouseOverBackground>
+                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                </fw:RevealElement.MouseOverBackground>
+                <local:HoverableButton.Background>
+                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                </local:HoverableButton.Background>
+            </local:HoverableButton>
+            <Image x:Name="youtubeIcon" Margin="30,10,30,25" Source="/images/youtube_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="6"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,58 @@
+﻿<Page x:Name="progressScreen" x:Class="reMCenters.InstallScreen"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:reMCenters"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+       xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+      Title="InstallScreen">
+
+    <Grid fw:PointerTracker.Enabled="True">
+        <local:HoverableButton OpacityMask="Magenta"  x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back" Margin="694,9,8,347" Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="BackButton_Click" >
+            <fw:RevealElement.MouseOverBackground>
+                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+            </fw:RevealElement.MouseOverBackground>
+            <Button.Background>
+                <SolidColorBrush Color="#80808080" Opacity="0"/>
+            </Button.Background>
+        </local:HoverableButton>
+        <Image x:Name="backIcon" Margin="711,15,26,367" Source="/images/back_icon.png" IsHitTestVisible="False"/>
+        <TextBlock HorizontalAlignment="Left" Height="33" Margin="10,65,0,0" Text="Current Status" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"/>
+        <ProgressBar  x:Name="progressRing"  Margin="342,113,0,0" Style="{DynamicResource MaterialDesignCircularProgressBar}" Value="{Binding ProgressValue, ElementName=progressScreen}" Orientation="Vertical" SmallChange="0" Height="3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="47" BorderThickness="1,1,1,1" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" FontSize="10" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="{x:Null}" OpacityMask="#FFEC7373">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="5" ScaleY="5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+            <ProgressBar.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF6C6CFF"/>
+                    <GradientStop Color="#FFCBE7FF" Offset="1"/>
+                    <GradientStop Color="#FF77FFFF" Offset="0.153"/>
+                    <GradientStop Color="#FF4EB6D8" Offset="0.34"/>
+                    <GradientStop Color="#FF9C9CF9" Offset="0.52"/>
+                    <GradientStop Color="#FF978EC9" Offset="0.65"/>
+                    <GradientStop Color="DeepSkyBlue" Offset="0.817"/>
+                </RadialGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <local:HoverableButton x:Name="startButton" IsEnabled="{Binding ButtonEnabled,ElementName=progressScreen,UpdateSourceTrigger=Explicit, Mode=TwoWay,IsAsync=True}"  Content="Start" Margin="248,350,317,10" Style="{DynamicResource ButtonRoundAccentRevealStyle}" Background="{x:Null}" VerticalContentAlignment="Bottom" Click="Button_Click" >
+            <fw:RevealElement.MouseOverBackground>
+                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+            </fw:RevealElement.MouseOverBackground>
+        </local:HoverableButton>
+        <Image x:Name="startIcon" Margin="317,356,386,30" Source="/images/start_hack.png" IsHitTestVisible="False"/>
+        <TextBlock x:Name="progressCaption" Margin="312,212,369,180" Text="TextBlock" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignCaptionTextBlock}" FontWeight="DemiBold" FontSize="20" Foreground="Black" OpacityMask="Red" FontStyle="Normal" FontStretch="Expanded" LineStackingStrategy="MaxHeight" TextAlignment="Center"/>
+        <TextBlock x:Name="Status" HorizontalAlignment="Left" Height="33" Margin="148,65,0,0" Text="Waiting to Start" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Style="{DynamicResource MaterialDesignCaptionTextBlock}"/>
+        <TextBlock x:Name="TitleHead" HorizontalAlignment="Left" Height="40" Margin="190,9,0,0" Text="Install" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" TextAlignment="Center" Style="{DynamicResource MaterialDesignHeadline4TextBlock}"/>
+
+
+    </Grid>
+</Page>

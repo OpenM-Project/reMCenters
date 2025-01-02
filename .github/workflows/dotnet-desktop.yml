@@ -17,16 +17,16 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore Packages
-      run: nuget restore "M Centers 8.0.sln"
+      run: nuget restore "reMCenters 8.0.sln"
 
     - name: Build reMCenters (x64)
-      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
+      run: msbuild reMCenters/reMCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
       
     - name: Publish reMCenters (x64)
       uses: actions/upload-artifact@v4
       with:
         name: reMCenters-Release_x64
-        path: D:\a\reMCenters\reMCenters\MCenters\bin\x64\Release\
+        path: D:\a\reMCenters\reMCenters\reMCenters\bin\x64\Release\
   x86:
     runs-on: windows-latest
 
@@ -40,13 +40,13 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore Packages
-      run: nuget restore "M Centers 8.0.sln"
+      run: nuget restore "reMCenters 8.0.sln"
 
     - name: Build reMCenters (x86)
-      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
+      run: msbuild reMCenters/reMCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
 
     - name: Publish reMCenters (x86)
       uses: actions/upload-artifact@v4
       with:
         name: reMCenters-Release_x86
-        path: D:\a\reMCenters\reMCenters\MCenters\bin\x86\Release\
+        path: D:\a\reMCenters\reMCenters\reMCenters\bin\x86\Release\
