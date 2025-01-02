@@ -13,12 +13,12 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
-        FontFamily="{DynamicResource MaterialDesignFont}" Effect="{DynamicResource MaterialDesignShadowDepth3}" ResizeMode="CanMinimize"  
+        FontFamily="{DynamicResource MaterialDesignFont}" Effect="{DynamicResource MaterialDesignShadowDepth3}" AllowsTransparency="True" WindowStyle="None"  ResizeMode="CanMinimize"  
                   
-          TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}" WindowStyle="None" AcrylicWindowStyle="NoIcon" Closed="AcrylicWindow_Closed"
+          TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}" Closed="AcrylicWindow_Closed"
                 >
     <fw:AcrylicWindow.Background>
-        <SolidColorBrush Color="#FFFAFAFA" Opacity="0.95"/>
+        <SolidColorBrush Color="#FFFAFAFA" Opacity="0.01"/>
     </fw:AcrylicWindow.Background>
 
 

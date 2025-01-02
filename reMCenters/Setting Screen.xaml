@@ -158,7 +158,7 @@
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="policyIcon" Margin="30,10,30,25" Source="/images/privacy_policy_icon.png" IsHitTestVisible="False" Grid.Row="1"/>
-            <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="4" Click="DiscordButton_Click"  >
+            <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="DiscordButton_Click"  >
                 <fw:RevealElement.MouseOverBackground>
                     <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
@@ -166,16 +166,7 @@
                     <SolidColorBrush Color="#80808080" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
-            <Image x:Name="discordIcon" Margin="30,10,30,25" Source="/images/discord_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="4"/>
-            <local:HoverableButton OpacityMask="Magenta" x:Name="youtubeButton" fw:RevealElement.BorderRadius="10" Content="YouTube"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="YoutubeButton_Click" >
-                <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
-                </fw:RevealElement.MouseOverBackground>
-                <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
-                </local:HoverableButton.Background>
-            </local:HoverableButton>
-            <Image x:Name="youtubeIcon" Margin="30,10,30,25" Source="/images/youtube_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="6"/>
+            <Image x:Name="discordIcon" Margin="30,10,30,25" Source="/images/discord_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="6"/>
         </Grid>
     </Grid>
 </Page>
