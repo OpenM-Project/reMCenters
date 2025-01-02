@@ -77,8 +77,16 @@ my-folder/                         # Root directory.
 |- MCentersLibrary.dll             # DLL file for MCentersLibrary
 |- MCentersLibrary.pdb             # PDB file for MCentersLibrary
 ```
-## Contributors
 
+## Contributors
  <a href = "https://github.com/OpenM-Project/reMCenters/graphs/contributors">
    <img src = "https://contrib.rocks/image?repo=OpenM-Project/reMCenters"/>
  </a>
+
+## Works used
+- [FluentWPF](https://github.com/sourcechord/FluentWPF) by [sourcechord](https://github.com/sourcechord/) - MIT License - Used for design.
+- [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/) by [MaterialDesignInXAML](https://github.com/MaterialDesignInXAML) - MIT License - Used for design.
+- [Zydis](https://github.com/zyantific/zydis) by [zyantific](https://github.com/zyantific/) - MIT License - Used for compiling patched DLL(s).
+- [M Centers 8.0](https://github.com/tinedpakgamer/M-Centers-8.0/) by [tinedpakgamer](https://github.com/tinedpakgamer) - Custom License - This repo is the base for this repo.
+
+#### Thank you all the developers above very much for their works to make this project possible.
