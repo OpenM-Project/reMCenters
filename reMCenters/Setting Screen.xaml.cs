@@ -21,7 +21,6 @@ namespace reMCenters
             viewButton.ConnectedImage = viewIcon;
             dllButton.ConnectedImage = dllIcon;
             logsFolderButton.ConnectedImage = logsFolderIcon;
-            youtubeButton.ConnectedImage = youtubeIcon;
             discordButton.ConnectedImage = discordIcon;
             agreementButton.ConnectedImage = agreementIcon;
             policyButton.ConnectedImage = policyIcon;
@@ -64,15 +63,6 @@ namespace reMCenters
         private void ErrorButton_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("explorer.exe", Logger.LogDirectory);
-        }
-
-
-        
-
-
-        private void YoutubeButton_Click(object sender, RoutedEventArgs e)
-        {
-            Functions.OpenBrowser("https://www.youtube.com/");
         }
 
 
