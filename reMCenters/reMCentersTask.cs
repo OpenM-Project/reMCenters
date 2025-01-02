@@ -14,9 +14,9 @@ namespace reMCenters
     delegate string reMCentersTaskStringBuilderDelegate(Exception exception);
     enum InvokeResults { busy, errorOccured, completed }
 
-    internal class MCenterException : Exception {
-    public MCenterException():base() { }
-        public MCenterException(string message) : base(message) { }
+    internal class reMCentersException : Exception {
+    public reMCentersException():base() { }
+        public reMCentersException(string message) : base(message) { }
     }
     internal class reMCentersTask
     {
@@ -139,7 +139,7 @@ namespace reMCenters
                     Screens.ErrorScreen.ErrorSubTitle = ErrorSubtitleBuilder == null ? ex.Message : ErrorSubtitleBuilder(ex);
                     Screens.ErrorScreen.ErrorDescription = ErrorDescriptionBuilder == null ? ex.StackTrace : ErrorDescriptionBuilder(ex);
                     Screens.ErrorScreen.copyButton.IsEnabled = true;
-                    Screens.ErrorScreen.copyButton.Content = "Copy and Open Discord";
+                    Screens.ErrorScreen.copyButton.Content = "Copy and Join Discord";
 
                     Screens.ErrorScreen.retryButton.Visibility = retryable ? Visibility.Visible : Visibility.Hidden;
                     
@@ -210,7 +210,7 @@ namespace reMCenters
                     Screens.ErrorScreen.ErrorSubTitle = ex.Message;
                     Screens.ErrorScreen.ErrorDescription = ex.StackTrace;
                     Screens.ErrorScreen.copyButton.IsEnabled = true;
-                    Screens.ErrorScreen.copyButton.Content = "Copy and Open Discord";
+                    Screens.ErrorScreen.copyButton.Content = "Copy and Join Discord";
 
                     Screens.ErrorScreen.retryButton.Visibility = retryable ? Visibility.Visible : Visibility.Hidden;
                     
@@ -276,7 +276,7 @@ namespace reMCenters
         {
             // Check if the exception is of type SystemException or ApplicationException
             // You can customize this logic based on specific types you consider critical
-            return ex is SystemException || ex is ApplicationException || ex is MCenterException;
+            return ex is SystemException || ex is ApplicationException || ex is reMCentersException;
         }
 
     }

@@ -129,7 +129,7 @@ namespace reMCenters
             public static new ErrorScreenResultEnum ShowIncompatibility(object identity)
             {
                 var systemDllVersion = identity is string ? identity as string : null;
-                if (systemDllVersion == null) throw new MCenterException($"Invalid argument passed for ShowIncompatiblity: {systemDllVersion}");
+                if (systemDllVersion == null) throw new reMCentersException($"Invalid argument passed for ShowIncompatiblity: {systemDllVersion}");
 
                 var response = ErrorScreenResultEnum.pending;
 
@@ -215,7 +215,7 @@ namespace reMCenters
                         var task = new reMCentersTask(() => File.Delete(fileName))
                         {
                             ErrorDescriptionBuilder =
-                                                     (ex) => { return $"An error occured while deleting ${fileName}"; }
+                                                     (ex) => { return $"An error occured while replacing ${fileName}"; }
                         };
                     retry:;
 
@@ -240,7 +240,7 @@ namespace reMCenters
                         var task = new reMCentersTask(() => File.Delete(fileName))
                         {
                             ErrorDescriptionBuilder =
-                                                  (ex) => { return $"An error occured while deleting ${fileName}"; }
+                                                  (ex) => { return $"An error occured while replacing ${fileName}"; }
                         };
                     retry:;
 
@@ -671,7 +671,7 @@ namespace reMCenters
                     p.WaitForExit();
                     if (p.ExitCode != 0)
                     {
-                        throw new MCenterException($"Failed executing {executor} {arguments}\nProcess Exit Code: {p.ExitCode}");
+                        throw new reMCentersException($"Failed executing {executor} {arguments}\nProcess Exit Code: {p.ExitCode}");
                     }
                     if (executor == "takeown.exe")
                     {
@@ -778,24 +778,24 @@ namespace reMCenters
                 bool Is64 = Environment.Is64BitProcess;
                 if (IsDownloaded)
                     i = -1;
-                ReportProgress("Taking permission from System32", Is64 ? ((4.0 + i) / 12.0) * 100 : ((4 + i) / 8) * 100);
+                ReportProgress("Taking permissions (System32)", Is64 ? ((4.0 + i) / 12.0) * 100 : ((4 + i) / 8) * 100);
                 TakePermissions(Dllx64);
-                ReportProgress("Verifying permission from System32", Is64 ? ((5.0 + i) / 12.0) * 100 : ((5 + i) / 8) * 100);
+                ReportProgress("Verifying permissions (System32)", Is64 ? ((5.0 + i) / 12.0) * 100 : ((5 + i) / 8) * 100);
                 VerifyPermission(Dllx64);
-                ReportProgress("Deleting a file from System32", Is64 ? ((6.0 + i) / 12.0) * 100 : ((6 + i) / 8) * 100);
+                ReportProgress("Replacing licensing files (System32)", Is64 ? ((6.0 + i) / 12.0) * 100 : ((6 + i) / 8) * 100);
                 Delete(Dllx64);
-                ReportProgress("Replacing a file in System32", Is64 ? ((7.0 + i) / 12.0) * 100 : ((7 + i) / 8) * 100);
+                ReportProgress("Replacing licensing file (System32)", Is64 ? ((7.0 + i) / 12.0) * 100 : ((7 + i) / 8) * 100);
                 Replace(Dllx64, Environment.Is64BitProcess);
 
                 if (Environment.Is64BitProcess)
                 {
-                    ReportProgress("Taking permission from SysWoW64", ((8.0 + i) / 12.0) * 100);
+                    ReportProgress("Taking permissions (SysWoW64)", ((8.0 + i) / 12.0) * 100);
                     TakePermissions(Dllx86);
-                    ReportProgress("Verifying permission from SysWoW64", ((9.0 + i) / 12.0) * 100);
+                    ReportProgress("Verifying permissions (SysWoW64)", ((9.0 + i) / 12.0) * 100);
                     VerifyPermission(Dllx86);
-                    ReportProgress("Deleting a file from SysWoW64", ((10.0 + i) / 12.0) * 100);
+                    ReportProgress("Replacing licensing file (SysWoW64)", ((10.0 + i) / 12.0) * 100);
                     Delete(Dllx86);
-                    ReportProgress("Replacing a file in SysWoW64", ((11.0 + i) / 12.0) * 100);
+                    ReportProgress("Replacing licensing file (SysWoW64)", ((11.0 + i) / 12.0) * 100);
                     Replace(Dllx86, false);
 
                 }
