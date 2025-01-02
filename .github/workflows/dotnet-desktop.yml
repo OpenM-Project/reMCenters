@@ -1,4 +1,4 @@
-name: M Centers 8.0 x64/x86 Builds
+name: reMCenters x64/x86 Builds
 
 on:
   push:
@@ -19,13 +19,13 @@ jobs:
     - name: Restore Packages
       run: nuget restore "M Centers 8.0.sln"
 
-    - name: Build M Centers (x64)
+    - name: Build reMCenters (x64)
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
       
-    - name: Publish M Centers (x64)
+    - name: Publish reMCenters (x64)
       uses: actions/upload-artifact@v4
       with:
-        name: M-Centers-8.0-Release x64
+        name: reMCenters-Release_x64
         path: D:\a\reMCenters\reMCenters\MCenters\bin\x64\Release\
   x86:
     runs-on: windows-latest
@@ -42,11 +42,11 @@ jobs:
     - name: Restore Packages
       run: nuget restore "M Centers 8.0.sln"
 
-    - name: Build M Centers (x86)
+    - name: Build reMCenters (x86)
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
 
-    - name: Publish M Centers (x86)
+    - name: Publish reMCenters (x86)
       uses: actions/upload-artifact@v4
       with:
-        name: M-Centers-8.0-Release x86
+        name: reMCenters-Release_x86
         path: D:\a\reMCenters\reMCenters\MCenters\bin\x86\Release\
