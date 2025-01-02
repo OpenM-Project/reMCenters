@@ -87,7 +87,7 @@ namespace MCenters
             public static string Dllx86 = "C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll";
             public static string baseThirdPartyPath = "C:\\ProgramData\\reMCenters\\Methods\\ThirdPartyDlls";
 
-            public string SelectedProviderName = "tinedpakgamer";
+            public string SelectedProviderName = "OpenM-Project";
             string SelectedPath = "";
             public static string[] AllThirdPartyUsernames = null;
             static DllMethod()
@@ -258,9 +258,9 @@ namespace MCenters
                     files.Add(fileName);
                 }
                 Clipboard.SetFileDropList(files);
-                Screens.AddNotificationToQueue("Copied to Clipboard", "Files were copied to clipboard\nNow opening discord in browser");
+                Screens.AddNotificationToQueue("Copied to clipboard", "DLLs were copied to clipboard\nNow opening discord server in browser");
                 response = ErrorScreenResultEnum.copy;
-                Functions.OpenBrowser("https://discord.gg/sU8qSdP5wP");
+                Functions.OpenBrowser("https://dc.openm.tech");
                 return response;
 
 
@@ -276,13 +276,13 @@ namespace MCenters
                 ReportProgress("Fixing ClipSVC", 0);
                 UninstallClipSVC();
                 if (Environment.Is64BitProcess)
-                    ReportProgress("Fixing x64 Dll", 25);
+                    ReportProgress("Fixing x64 DLL", 25);
                 else
-                    ReportProgress("Fixing Dll", 50);
+                    ReportProgress("Fixing DLL", 50);
                 SfcFileScan("C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll");
                 if (Environment.Is64BitProcess)
                 {
-                    ReportProgress("Fixing x86 Dll", 50);
+                    ReportProgress("Fixing x86 DLL", 50);
                     SfcFileScan("C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll");
                 }
                 ReportProgress("Uninstall Successful", 100);
@@ -325,7 +325,7 @@ namespace MCenters
                 {
                     if (string.IsNullOrWhiteSpace(e.Data)) return;
                     var asciiData = Encoding.ASCII.GetString(Encoding.ASCII.GetBytes(e.Data));
-                    Logger.Write("Output Recieved:\t" + asciiData);
+                    Logger.Write("Output recieved:\t" + asciiData);
                 };
                
                 p.Start();
@@ -346,7 +346,7 @@ namespace MCenters
                 UseAutoPatch=useAutoPatch;
                 if (!useAutoPatch)
                 {
-                    SelectedProviderName = "tinedpakgamer";
+                    SelectedProviderName = "OpenM-Project";
                     SelectedPath = baseDllPath;
                     if (thirdpartyUserName != null && AllThirdPartyUsernames.Contains(thirdpartyUserName))
                     {
@@ -423,7 +423,7 @@ namespace MCenters
                 try
                 {
 
-                    client.DownloadFile("https://raw.githubusercontent.com/tinedpakgamer/mcenterdlls/main/main", baseDllPath + "\\Records.txt");
+                    client.DownloadFile("https://raw.githubusercontent.com/OpenM-Project/mcenterdlls/main/main", baseDllPath + "\\Records.txt");
 
                     Logger.Write("File Downloaded");
                 }

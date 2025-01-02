@@ -129,10 +129,10 @@ namespace MCenters
 
 
                     case ErrorTypeEnum.ReportDll:
-                        copyButton.Content = "Copy Files and Visit M Centers server";
+                        copyButton.Content = "Copy DLLs and join the OpenM discord";
                         break;
                     default:
-                        copyButton.Content = "Copy to ClipBoard";
+                        copyButton.Content = "Copy to clipboard";
                         break;
 
                 }

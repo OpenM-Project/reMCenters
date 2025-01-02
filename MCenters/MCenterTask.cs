@@ -82,12 +82,12 @@ namespace MCenters
                 
                 var is64 = Environment.Is64BitProcess;
                 var str = is64 ? "x64" : "x86";
-                var url = is64 ? "https://github.com/tinedpakgamer/M-Centers-8.0/raw/master/VC_redist.x64.exe" : "https://github.com/tinedpakgamer/M-Centers-8.0/raw/master/VC_redist.x86.exe";
+                var url = is64 ? "https://aka.ms/vs/17/release/vc_redist.x64.exe" : "https://aka.ms/vs/17/release/vc_redist.x86.exe";
                 Application.Current.Dispatcher.Invoke(() =>
                 {
 
 
-                    Screens.ShowDialog("Microsoft Visual C++ Redistributable", $"Microsoft Visual C++ Redistributable {str} is required to use this Mod Option", "Later", "Download Now", () => Functions.OpenBrowser(url), null);
+                    Screens.ShowDialog("Microsoft Visual C++ Redistributable", $"Microsoft Visual C++ Redistributable {str} is required to use this Mod Option", "Ignore", "Download now", () => Functions.OpenBrowser(url), null);
                 });
                 return false;
 
@@ -99,7 +99,7 @@ namespace MCenters
                 {
 
 
-                    Screens.ShowDialog(err.GetType().FullName, $"{err.Message} {err.HResult}", "Cancel", "Contact Discord", () => Functions.OpenBrowser("https://discord.gg/sU8qSdP5wP"), null);
+                    Screens.ShowDialog(err.GetType().FullName, $"{err.Message} {err.HResult}", "Cancel", "Join discord", () => Functions.OpenBrowser("https://dc.openm.tech/"), null);
                 });
                 return false;
             }
@@ -186,7 +186,7 @@ namespace MCenters
                     {
 
                         Clipboard.SetText(clipboardMessage);
-                        Functions.OpenBrowser("https://discord.gg/sU8qSdP5wP");
+                        Functions.OpenBrowser("https://dc.openm.tech/");
                     };
                     var content = Screens.GetScreen();
                     Screens.SetScreen(Screens.ErrorScreen);
@@ -252,8 +252,8 @@ namespace MCenters
 
 
                         Clipboard.SetText(clipboardMessage);
-                        Screens.AddNotificationToQueue("Copied to Clipboard", "Error was copied to clipboard\nNow opening discord in browser");
-                        Functions.OpenBrowser("https://discord.gg/sU8qSdP5wP");
+                        Screens.AddNotificationToQueue("Copied to clipboard", "Error was copied to clipboard\nNow opening discord server in browser");
+                        Functions.OpenBrowser("https://dc.openm.tech/");
                     };
                     var content = Screens.GetScreen();
                     Screens.SetScreen(Screens.ErrorScreen);

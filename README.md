@@ -1,7 +1,7 @@
 <div align='center'>
 <h1>reMCenters</h1>
 <p>
-  <img src='https://github.com/OpenM-Project/reMCenters/blob/master/MCenters/images/mcenter_5_icon.png?raw=true' alt='M Centers Icon' width="30%">
+  <img src='https://github.com/OpenM-Project/reMCenters/blob/master/MCenters/images/mcenter_5_icon.png?raw=true' alt='reMCenters Icon' width="30%">
 </p>
 <p>A multi-method &amp; WIP unlocker for <em><a href="ms-windows-store://pdp/?ProductId=9NBLGGH2JHXJ">Minecraft for Windows</a></em>
 </p>
