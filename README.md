@@ -68,14 +68,14 @@ If you live in China, check if you can visit raw.githubusercontent.com directly,
 ```
 my-folder/                         # Root directory.
 |- FluentWPF.dll                   # DLL file for FluentWPF library
-|- M-Centers.exe                   # Main executable
-|- M-Centers.exe.config            # Config file for M-Centers.exe
-|- reMCenters.pdb                   # PDB file for reMCenters
+|- reMCenters.exe                  # Main executable
+|- reMCenters.exe.config           # Config file for reMCenters.exe
+|- reMCenters.pdb                  # PDB file for reMCenters
 |- MaterialDesignColors.dll        # DLL file for MaterialDesignColors library
 |- MaterialDesignThemes.Wpf.dll    # DLL file for MaterialDesignThemes.Wpf library
 |- MaterialDesignThemes.Wpf.xml    # XML file for MaterialDesignThemes.Wpf library
-|- reMCentersLibrary.dll             # DLL file for reMCentersLibrary
-|- reMCentersLibrary.pdb             # PDB file for reMCentersLibrary
+|- reMCentersLibrary.dll           # DLL file for reMCentersLibrary
+|- reMCentersLibrary.pdb           # PDB file for reMCentersLibrary
 ```
 
 ## Contributors
