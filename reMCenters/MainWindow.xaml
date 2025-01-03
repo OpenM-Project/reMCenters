@@ -18,7 +18,7 @@
           TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}" Closed="AcrylicWindow_Closed"
                 >
     <fw:AcrylicWindow.Background>
-        <SolidColorBrush Color="#FF171717" Opacity="0.01"/>
+        <SolidColorBrush Color="#FF171717" Opacity="1"/>
     </fw:AcrylicWindow.Background>
 
 
