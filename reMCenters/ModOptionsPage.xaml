@@ -28,10 +28,10 @@
         <TextBlock Grid.RowSpan="3" Text="Mod Options" TextWrapping="Wrap" VerticalAlignment="Top"  TextAlignment="Center" Style="{DynamicResource MaterialDesignHeadline2TextBlock}" Grid.ColumnSpan="4" Height="80"  />
         <local:HoverableButton OpacityMask="Magenta" x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="BackButton_Click" Grid.Row="1" Grid.Column="2">
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
             <local:HoverableButton.Background>
-                <SolidColorBrush Color="#80808080" Opacity="0"/>
+                <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
             </local:HoverableButton.Background>
         </local:HoverableButton>
         <Image x:Name="backIcon" Margin="15,5,15,25" Source="/images/back.png" IsHitTestVisible="False" Grid.Row="1" Grid.Column="2"/>
@@ -50,10 +50,10 @@
 
             <local:HoverableButton OpacityMask="Magenta" x:Name="dll_online_button" fw:RevealElement.BorderRadius="10"  Content="DLL Method (Online)"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllOnlineButton_Clicked" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="dll_online_image" IsHitTestVisible="False" Source="images\dll_online_icon.png" Margin="30"  />
@@ -61,10 +61,10 @@
 
             <local:HoverableButton OpacityMask="Magenta" Grid.Column="1" x:Name="dll_auto_patch_button" fw:RevealElement.BorderRadius="10"  Content="DLL Method (Auto-Patch)"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllAutoPatchButton_Clicked" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="dll_auto_patch_image" IsHitTestVisible="False" Source="images\dll_auto_patch_icon.png" Margin="30" Grid.Column="1"  />
@@ -72,10 +72,10 @@
 
             <local:HoverableButton OpacityMask="Magenta" Grid.Row="1" x:Name="dll_non_permanent_button" fw:RevealElement.BorderRadius="10"  Content="DLL (Non-Permanent)"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllNonPermanentButton_Clicked" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="dll_non_permanent_image" IsHitTestVisible="False" Grid.Row="1" Source="images\dll_non_permanent_icon.png" Margin="30"  />
@@ -83,10 +83,10 @@
 
             <local:HoverableButton OpacityMask="Magenta" Grid.Row="1" Grid.Column="1" x:Name="mcenter_5_button" fw:RevealElement.BorderRadius="10"  Content="Memory Injection"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="reMCenters5Button_Clicked" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="mcenter_5_image" IsHitTestVisible="False" Source="images\mcenter_5_icon.png" Grid.Row="1" Grid.Column="1" Margin="30"  />
@@ -94,10 +94,10 @@
 
             <local:HoverableButton OpacityMask="Magenta" Grid.Row="2" x:Name="hook_button" fw:RevealElement.BorderRadius="10"  Content="Hooking Method"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="HookButton_Clicked" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="hook_image" IsHitTestVisible="False" Source="images\dllhook.png" Margin="30"  Grid.Row="2" />
@@ -124,19 +124,19 @@
 
                     <Button Grid.Row="2"   OpacityMask="Magenta" FontSize="16"  fw:RevealElement.BorderRadius="10" Content="Select"   Style="{DynamicResource ButtonRoundRevealStyle}" Click="ActivateButton_Click"  >
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="Black" Opacity="0.5"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <Button.Background>
-                            <SolidColorBrush Color="#80808080" Opacity="0.6"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.6"/>
                         </Button.Background>
                     </Button>
 
                     <Button Grid.Row="2" Grid.Column="2"  OpacityMask="Magenta" FontSize="16"  fw:RevealElement.BorderRadius="10" Content="Learn More"   Style="{DynamicResource ButtonRoundAccentRevealStyle}" Click="LearnMore_Click"  >
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="Black" Opacity="0.5"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <Button.Background>
-                            <SolidColorBrush Color="#80808080" Opacity="0.6"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.6"/>
                         </Button.Background>
                     </Button>
                 </Grid>

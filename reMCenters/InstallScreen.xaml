@@ -14,10 +14,10 @@
     <Grid fw:PointerTracker.Enabled="True">
         <local:HoverableButton OpacityMask="Magenta"  x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back" Margin="694,9,8,347" Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="BackButton_Click" >
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
             <Button.Background>
-                <SolidColorBrush Color="#80808080" Opacity="0"/>
+                <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
             </Button.Background>
         </local:HoverableButton>
         <Image x:Name="backIcon" Margin="711,15,26,367" Source="/images/back.png" IsHitTestVisible="False"/>
@@ -45,7 +45,7 @@
         </ProgressBar>
         <local:HoverableButton x:Name="startButton" IsEnabled="{Binding ButtonEnabled,ElementName=progressScreen,UpdateSourceTrigger=Explicit, Mode=TwoWay,IsAsync=True}"  Content="Start" Margin="248,350,317,10" Style="{DynamicResource ButtonRoundAccentRevealStyle}" Background="{x:Null}" VerticalContentAlignment="Bottom" Click="Button_Click" >
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
         </local:HoverableButton>
         <Image x:Name="startIcon" Margin="317,356,386,30" Source="/images/startinstall.png" IsHitTestVisible="False"/>

@@ -41,9 +41,9 @@
                 <RowDefinition Height="30*"/>
                 <RowDefinition Height="148*"/>
             </Grid.RowDefinitions>
-            <CheckBox x:Name="thirdPartyCheckBox" Content="Enable third party cracked dlls providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3" Checked="thirdPartyCheckBox_Checked"/>
+            <CheckBox x:Name="thirdPartyCheckBox" Content="Enable 3rd Party DLL Providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3" Checked="thirdPartyCheckBox_Checked"/>
 
-            <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="10" Background="#FF171717" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
+            <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="1" Background="#FF171717" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
                 <fw:AcrylicPanel.BindingGroup>
                     <BindingGroup/>
                 </fw:AcrylicPanel.BindingGroup>
@@ -66,19 +66,19 @@
                     <TextBox x:Name="thirdPartyTextBox" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxLines="3" Grid.ColumnSpan="3" CharacterCasing="Lower" TextWrapping="Wrap" Grid.Row="1" />
                     <local:HoverableButton Margin="10,0" OpacityMask="Magenta" x:Name="addButton" fw:RevealElement.BorderRadius="10" Content="Add"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom"  Grid.Column="4" Click="AddButton_Click"   Grid.Row="1" Grid.RowSpan="2">
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <local:HoverableButton.Background>
-                            <SolidColorBrush Color="#80808080" Opacity="0"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                         </local:HoverableButton.Background>
                     </local:HoverableButton>
                     <Image x:Name="addIcon" Margin="25,10,25,25" Source="/images/add.png" IsHitTestVisible="False" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" />
                     <local:HoverableButton OpacityMask="Magenta" x:Name="viewButton" fw:RevealElement.BorderRadius="10" Content="View Providers"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="3" Click="ViewButton_Click" Grid.Column="1"  >
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <local:HoverableButton.Background>
-                            <SolidColorBrush Color="#80808080" Opacity="0"/>
+                            <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                         </local:HoverableButton.Background>
                     </local:HoverableButton>
 
@@ -88,10 +88,10 @@
             </fw:AcrylicPanel>
             <local:HoverableButton OpacityMask="Magenta" x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Column="2" Grid.RowSpan="2" Click="BackButton_Click">
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="backIcon" Margin="15,5,15,25" Source="/images/back.png" IsHitTestVisible="False" Grid.Column="2" Grid.RowSpan="2"/>
@@ -103,22 +103,22 @@
                 <ColumnDefinition Width="466*"/>
                 <ColumnDefinition Width="157*"/>
             </Grid.ColumnDefinitions>
-            <local:HoverableButton OpacityMask="Magenta" x:Name="dllButton" fw:RevealElement.BorderRadius="10" Content="Open Dlls folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllButton_Click" >
+            <local:HoverableButton OpacityMask="Magenta" x:Name="dllButton" fw:RevealElement.BorderRadius="10" Content="Open DLL folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllButton_Click" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="dllIcon" Margin="20" Source="/images/dllfolder.png"  IsHitTestVisible="False"/>
 
-            <local:HoverableButton Grid.Column="2" OpacityMask="Magenta" x:Name="logsFolderButton" fw:RevealElement.BorderRadius="10"  Content="Logs Folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="ErrorButton_Click" >
+            <local:HoverableButton Grid.Column="2" OpacityMask="Magenta" x:Name="logsFolderButton" fw:RevealElement.BorderRadius="10"  Content="Open Log Folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="ErrorButton_Click" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
 
@@ -140,12 +140,12 @@
                 <ColumnDefinition Width="10*"/>
                 <ColumnDefinition Width="157*"/>
             </Grid.ColumnDefinitions>
-            <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="DiscordButton_Click"  >
+            <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Join Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="DiscordButton_Click"  >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
-                    <SolidColorBrush Color="#80808080" Opacity="0"/>
+                    <SolidColorBrush Color="WhiteSmoke" Opacity="0"/>
                 </local:HoverableButton.Background>
             </local:HoverableButton>
             <Image x:Name="discordIcon" Margin="30,10,30,25" Source="/images/discord_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="6"/>
