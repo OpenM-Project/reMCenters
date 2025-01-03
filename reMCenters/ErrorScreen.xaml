@@ -19,7 +19,7 @@
         <TextBlock x:Name="errorLine" HorizontalAlignment="Left" Height="86" Margin="94,77,0,0" Text="Error Line" TextWrapping="Wrap" VerticalAlignment="Top" Width="681" Style="{DynamicResource SubtitleTextBlockStyle}" FontSize="12"/>
         <local:HoverableButton x:Name="copyButton" fw:RevealElement.BorderRadius="10"  Content="Copy to clipboard" Margin="565,331,25,43" Style="{DynamicResource ButtonRoundRevealStyle}" VerticalContentAlignment="Bottom" OpacityMask="Magenta" Click="CopyButton_Click"  >
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
             <Button.Background>
                 <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -27,7 +27,7 @@
         </local:HoverableButton>
         <local:HoverableButton x:Name="retryButton" OpacityMask="Magenta" fw:RevealElement.BorderRadius="10" Content="Retry" HorizontalAlignment="Left" Margin="228,331,0,43" Width="186" Style="{DynamicResource ButtonRoundRevealStyle}" VerticalContentAlignment="Bottom" Click="RetryButton_Click">
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
             <Button.Background>
                 <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -35,7 +35,7 @@
         </local:HoverableButton>
         <local:HoverableButton x:Name="cancelButton" OpacityMask="Magenta" fw:RevealElement.BorderRadius="10" Content="Cancel" HorizontalAlignment="Left" Margin="25,331,0,43" Width="185" Style="{DynamicResource ButtonRoundRevealStyle}" VerticalContentAlignment="Bottom" Click="CancelButton_Click">
             <fw:RevealElement.MouseOverBackground>
-                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
             <Button.Background>
                 <SolidColorBrush Color="#80808080" Opacity="0"/>

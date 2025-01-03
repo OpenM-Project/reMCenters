@@ -66,7 +66,7 @@
                     <TextBox x:Name="thirdPartyTextBox" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxLines="3" Grid.ColumnSpan="3" CharacterCasing="Lower" TextWrapping="Wrap" Grid.Row="1" />
                     <local:HoverableButton Margin="10,0" OpacityMask="Magenta" x:Name="addButton" fw:RevealElement.BorderRadius="10" Content="Add"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom"  Grid.Column="4" Click="AddButton_Click"   Grid.Row="1" Grid.RowSpan="2">
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <local:HoverableButton.Background>
                             <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -75,7 +75,7 @@
                     <Image x:Name="addIcon" Margin="25,10,25,25" Source="/images/add.png" IsHitTestVisible="False" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" />
                     <local:HoverableButton OpacityMask="Magenta" x:Name="viewButton" fw:RevealElement.BorderRadius="10" Content="View Providers"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="3" Click="ViewButton_Click" Grid.Column="1"  >
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <local:HoverableButton.Background>
                             <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -88,7 +88,7 @@
             </fw:AcrylicPanel>
             <local:HoverableButton OpacityMask="Magenta" x:Name="backButton" fw:RevealElement.BorderRadius="10"  Content="Back"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Column="2" Grid.RowSpan="2" Click="BackButton_Click">
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
                     <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -105,7 +105,7 @@
             </Grid.ColumnDefinitions>
             <local:HoverableButton OpacityMask="Magenta" x:Name="dllButton" fw:RevealElement.BorderRadius="10" Content="Open Dlls folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="DllButton_Click" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
                     <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -115,7 +115,7 @@
 
             <local:HoverableButton Grid.Column="2" OpacityMask="Magenta" x:Name="logsFolderButton" fw:RevealElement.BorderRadius="10"  Content="Logs Folder"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Click="ErrorButton_Click" >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
                     <SolidColorBrush Color="#80808080" Opacity="0"/>
@@ -142,7 +142,7 @@
             </Grid.ColumnDefinitions>
             <local:HoverableButton OpacityMask="Magenta" x:Name="discordButton" fw:RevealElement.BorderRadius="10" Content="Discord"  Style="{DynamicResource ButtonRoundAccentRevealStyle}" VerticalContentAlignment="Bottom" Grid.Row="1" Grid.Column="6" Click="DiscordButton_Click"  >
                 <fw:RevealElement.MouseOverBackground>
-                    <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                 </fw:RevealElement.MouseOverBackground>
                 <local:HoverableButton.Background>
                     <SolidColorBrush Color="#80808080" Opacity="0"/>

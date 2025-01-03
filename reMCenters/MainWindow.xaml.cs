@@ -36,7 +36,7 @@ namespace reMCenters
             };
             var versionInfo = Process.GetCurrentProcess().MainModule.FileVersionInfo;
             CurrentVersion = versionInfo.FileVersion;
-            ResourceDictionaryEx.GlobalTheme = ElementTheme.Light;
+            ResourceDictionaryEx.GlobalTheme = ElementTheme.Dark;
             InitializeComponent();
             Title = $"reMCenters {versionInfo.FileMajorPart}.{versionInfo.FileMinorPart} Beta";
             

@@ -51,20 +51,20 @@
                     <Button x:Name="DialogCancelButton" Grid.Row="2"  Grid.Column="1" Style="{DynamicResource ButtonRoundRevealStyle}" Content="Cancel"   OpacityMask="Magenta"  
         fw:RevealElement.BorderRadius="10" Click="DialogCancelButton_Click">
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <Button.Background>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.0"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.0"/>
                         </Button.Background>
 
                     </Button>
                     <Button x:Name="DialogOkButton" Grid.Row="2"  Grid.Column="3" Style="{DynamicResource ButtonRoundRevealStyle}" Content="OK"   OpacityMask="Magenta"  
 fw:RevealElement.BorderRadius="10" Click="DialogOkButton_Click">
                         <fw:RevealElement.MouseOverBackground>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.5"/>
                         </fw:RevealElement.MouseOverBackground>
                         <Button.Background>
-                            <SolidColorBrush Color="#FF4CC2FF" Opacity="0.0"/>
+                            <SolidColorBrush Color="#FF181C14" Opacity="0.0"/>
                         </Button.Background>
 
                     </Button>
