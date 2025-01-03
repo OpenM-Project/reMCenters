@@ -236,33 +236,25 @@
   <ItemGroup>
     <Resource Include="images\mcenter_5_icon.png" />
     <Resource Include="reMCenters.ico" />
-    <Resource Include="images\256x256.png" />
-    <Resource Include="images\add_icon.png" />
-    <Resource Include="images\agreement_icon.png" />
-    <Resource Include="images\back_icon.png" />
-    <Resource Include="images\cancel_icon.png" />
+    <Resource Include="images\add.png" />
+    <Resource Include="images\back.png" />
+    <Resource Include="images\cancel.png" />
     <Resource Include="images\discord_icon.png" />
     <Resource Include="images\dll_non_permanent_icon.png" />
     <Resource Include="images\dll_online_icon.png" />
-    <Resource Include="images\hook_icon.png" />
+    <Resource Include="images\dllhook.png" />
     <Resource Include="images\dll_auto_patch_icon.png" />
-    <Content Include="images\icons8-cancel.svg" />
-    <Resource Include="images\clipboard_copy.png" />
-    <Resource Include="images\uninstall_hack.png" />
-    <Resource Include="images\icons8-download-64.png" />
-    <Resource Include="images\error_records_icon.png" />
-    <Resource Include="images\view_providers.png" />
-    <Resource Include="images\dll_folder_icon.png" />
-    <Resource Include="images\start_hack.png" />
-    <Resource Include="images\privacy_policy_icon.png" />
-    <Resource Include="images\retry_icon.png" />
+    <Resource Include="images\copytoclipboard.png" />
+    <Resource Include="images\uninstallhack.png" />
+    <Resource Include="images\errorrecords.png" />
+    <Resource Include="images\viewproviders.png" />
+    <Resource Include="images\dllfolder.png" />
+    <Resource Include="images\startinstall.png" />
+    <Resource Include="images\retry.png" />
     <Resource Include="images\settings.png" />
-    <Resource Include="images\install_hack.png" />
-    <Resource Include="images\logo 2.png" />
-    <Resource Include="images\title_logo.png" />
-    <Resource Include="images\youtube_icon.png" />
-    <Resource Include="images\youtube 2.png" />
-    <Resource Include="images\options.png" />
+    <Resource Include="images\installhack.png" />
+    <Resource Include="images\mainmenutitle.png" />
+    <Resource Include="images\modoptions.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

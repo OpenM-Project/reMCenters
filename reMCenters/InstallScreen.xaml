@@ -20,7 +20,7 @@
                 <SolidColorBrush Color="#80808080" Opacity="0"/>
             </Button.Background>
         </local:HoverableButton>
-        <Image x:Name="backIcon" Margin="711,15,26,367" Source="/images/back_icon.png" IsHitTestVisible="False"/>
+        <Image x:Name="backIcon" Margin="711,15,26,367" Source="/images/back.png" IsHitTestVisible="False"/>
         <TextBlock HorizontalAlignment="Left" Height="33" Margin="10,65,0,0" Text="Current Status" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Style="{DynamicResource MaterialDesignSubtitle1TextBlock}"/>
         <ProgressBar  x:Name="progressRing"  Margin="342,113,0,0" Style="{DynamicResource MaterialDesignCircularProgressBar}" Value="{Binding ProgressValue, ElementName=progressScreen}" Orientation="Vertical" SmallChange="0" Height="3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="47" BorderThickness="1,1,1,1" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" FontSize="10" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="{x:Null}" OpacityMask="#FFEC7373">
             <ProgressBar.RenderTransform>
@@ -48,7 +48,7 @@
                 <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
             </fw:RevealElement.MouseOverBackground>
         </local:HoverableButton>
-        <Image x:Name="startIcon" Margin="317,356,386,30" Source="/images/start_hack.png" IsHitTestVisible="False"/>
+        <Image x:Name="startIcon" Margin="317,356,386,30" Source="/images/startinstall.png" IsHitTestVisible="False"/>
         <TextBlock x:Name="progressCaption" Margin="312,212,369,180" Text="TextBlock" TextWrapping="Wrap" Style="{DynamicResource MaterialDesignCaptionTextBlock}" FontWeight="DemiBold" FontSize="20" Foreground="Black" OpacityMask="Red" FontStyle="Normal" FontStretch="Expanded" LineStackingStrategy="MaxHeight" TextAlignment="Center"/>
         <TextBlock x:Name="Status" HorizontalAlignment="Left" Height="33" Margin="148,65,0,0" Text="Waiting to Start" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Style="{DynamicResource MaterialDesignCaptionTextBlock}"/>
         <TextBlock x:Name="TitleHead" HorizontalAlignment="Left" Height="40" Margin="190,9,0,0" Text="Install" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" TextAlignment="Center" Style="{DynamicResource MaterialDesignHeadline4TextBlock}"/>

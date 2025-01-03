@@ -75,9 +75,9 @@
             </Button.Background>
         </local:HoverableButton>
 
-        <Image x:Name="installIcon" Margin="48,4,51,22" Grid.Row="2" Source="/images/install_hack.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False"/>
-        <Image x:Name="uninstallIcon" Margin="48,4,51,22" Grid.Column="1" Grid.Row="2" Source="/images/uninstall_hack.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False"/>
-        <Image x:Name="modOptionsIcon"  Margin="48,4,51,22" Grid.Column="2" Grid.Row="2" Source="/images/options.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False" >
+        <Image x:Name="installIcon" Margin="48,4,51,22" Grid.Row="2" Source="/images/installhack.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False"/>
+        <Image x:Name="uninstallIcon" Margin="48,4,51,22" Grid.Column="1" Grid.Row="2" Source="/images/uninstallhack.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False"/>
+        <Image x:Name="modOptionsIcon"  Margin="48,4,51,22" Grid.Column="2" Grid.Row="2" Source="/images/modoptions.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False" >
 
         </Image>
 
@@ -93,7 +93,7 @@
             </Button.Background>
         </local:HoverableButton>
         <Image x:Name="settingsLogo" Margin="196,4,14,15" Grid.Column="2" Source="/images/settings.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False" RenderTransformOrigin="0.729,0"/>
-        <Image Margin="0" Grid.Column="1" Source="/images/title_logo.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False" RenderTransformOrigin="0.729,0"/>
+        <Image Margin="0" Grid.Column="1" Source="/images/mainmenutitle.png" StretchDirection="Both" Stretch="Uniform" IsHitTestVisible="False" RenderTransformOrigin="0.729,0"/>
 
     </Grid>
 </fw:AcrylicWindow>

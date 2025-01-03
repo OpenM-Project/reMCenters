@@ -41,9 +41,9 @@
                 <SolidColorBrush Color="#80808080" Opacity="0"/>
             </Button.Background>
         </local:HoverableButton>
-        <Image x:Name="cancelIcon" Margin="98,340,660,70" IsHitTestVisible="False" Source="/images/cancel_icon.png" Stretch="Uniform"/>
-        <Image x:Name="retryIcon" Margin="302,340,456,70" IsHitTestVisible="False" Source="/images/retry_icon.png" Stretch="Uniform"/>
-        <Image x:Name="copyIcon" Margin="649,340,109,70" IsHitTestVisible="False" Source="/images/clipboard_copy.png" Stretch="Uniform" RenderTransformOrigin="-0.238,0.333"/>
+        <Image x:Name="cancelIcon" Margin="98,340,660,70" IsHitTestVisible="False" Source="/images/cancel.png" Stretch="Uniform"/>
+        <Image x:Name="retryIcon" Margin="302,340,456,70" IsHitTestVisible="False" Source="/images/retry.png" Stretch="Uniform"/>
+        <Image x:Name="copyIcon" Margin="649,340,109,70" IsHitTestVisible="False" Source="/images/copytoclipboard.png" Stretch="Uniform" RenderTransformOrigin="-0.238,0.333"/>
 
 
 
