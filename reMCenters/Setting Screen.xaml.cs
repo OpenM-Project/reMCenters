@@ -22,8 +22,6 @@ namespace reMCenters
             dllButton.ConnectedImage = dllIcon;
             logsFolderButton.ConnectedImage = logsFolderIcon;
             discordButton.ConnectedImage = discordIcon;
-            agreementButton.ConnectedImage = agreementIcon;
-            policyButton.ConnectedImage = policyIcon;
             thirdPartyBox.SetBinding(AcrylicPanel.IsEnabledProperty, new Binding("IsChecked") { Source = thirdPartyCheckBox });
         }
 
@@ -70,20 +68,6 @@ namespace reMCenters
         private void DiscordButton_Click(object sender, RoutedEventArgs e)
         {
             Functions.OpenBrowser("https://dc.openm.tech");
-        }
-
-
-
-        private void AgreementButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-
-        private void PolicyButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void thirdPartyCheckBox_Checked(object sender, RoutedEventArgs e)
