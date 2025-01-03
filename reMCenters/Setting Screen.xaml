@@ -43,7 +43,7 @@
             </Grid.RowDefinitions>
             <CheckBox x:Name="thirdPartyCheckBox" Content="Enable third party cracked dlls providers" Style="{DynamicResource MaterialDesignAccentCheckBox}"   Grid.Row="0"   Grid.Column="0" Grid.ColumnSpan="3" Checked="thirdPartyCheckBox_Checked"/>
 
-            <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="10" Background="#FFDED3D3" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
+            <fw:AcrylicPanel x:Name="thirdPartyBox"  Grid.Row="1" TintOpacity="10" Background="#FF171717" Style="{DynamicResource AcrylicContentControlStyle}" Grid.RowSpan="2"  >
                 <fw:AcrylicPanel.BindingGroup>
                     <BindingGroup/>
                 </fw:AcrylicPanel.BindingGroup>

@@ -8,7 +8,7 @@
         
         xmlns:local="clr-namespace:reMCenters"
         mc:Ignorable="d"
-        Height="450" Width="800" TintColor="#FFD3D3D3" TitleBarMode="Extend" TintOpacity="0.1"
+        Height="450" Width="800" TintColor="#FF171717" TitleBarMode="Extend" TintOpacity="0.1"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
@@ -18,7 +18,7 @@
           TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}" Closed="AcrylicWindow_Closed"
                 >
     <fw:AcrylicWindow.Background>
-        <SolidColorBrush Color="#FFFAFAFA" Opacity="0.01"/>
+        <SolidColorBrush Color="#FF171717" Opacity="0.01"/>
     </fw:AcrylicWindow.Background>
 
 
