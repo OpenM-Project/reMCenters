@@ -149,7 +149,7 @@ namespace reMCenters
                     Screens.DllErrorScreen.CancelClicked += (sender, e) => { response = ErrorScreenResultEnum.cancel; };
                     Screens.DllErrorScreen.ErrorTitle = "Unsupported Version " + systemDllVersion;
                     Screens.DllErrorScreen.ErrorSubTitle = "";
-                    Screens.DllErrorScreen.ErrorDescription = "reMCenters currently does not support your version of Windows.\nYou can retry, if you think it was a network issue.\nIf this is not a network issue then hit Submit Dlls to report your version to reMCenters";
+                    Screens.DllErrorScreen.ErrorDescription = "This method does not currently does not support your version of Windows.\nYou can retry, if you think it was a network issue.\nIf this is not a network issue then hit Submit Dlls to report your version to reMCenters.";
                     Screens.SetScreen(Screens.DllErrorScreen);
 
                 });
@@ -169,7 +169,7 @@ namespace reMCenters
 
 
                             Screens.SetScreen(Screens.InstallScreen);
-                            ReportProgress("Waiting to Start", 0);
+                            ReportProgress("Waiting to start", 0);
                             
 
                             Screens.DllErrorScreen.RemoveAllHandles();
@@ -184,7 +184,7 @@ namespace reMCenters
                         {
 
                             Screens.SetScreen(Screens.MainScreen);
-                            ReportProgress("Waiting to Start", 0);
+                            ReportProgress("Waiting to start", 0);
                             Screens.DllErrorScreen.RemoveAllHandles();
 
                         });
@@ -514,7 +514,7 @@ namespace reMCenters
                         }
                         catch (WebException)
                         {
-                            Logger.Write("Error Occured while downloading dll records from "+provider);
+                            Logger.Write("Error occured while downloading DLL records from "+provider);
                         }
 
 
@@ -605,13 +605,13 @@ namespace reMCenters
 
                     client.DownloadFile(x64DllDownloadUrl, x64DllFile);
                     client.DownloadFile(x86DllDownloadUrl, x86DllFile);
-                    Logger.Write("Files Downloaded");
+                    Logger.Write("DLLs downloaded");
                     Logger.CompleteOperation("Download of version " + Version);
 
                 }
                 catch (WebException)
                 {
-                    Logger.Write("Files failed to download");
+                    Logger.Write("DLLs failed to download");
                     Logger.CompleteOperation("Download of version " + Version);
 
                     return false;
@@ -799,7 +799,7 @@ namespace reMCenters
                     Replace(Dllx86, false);
 
                 }
-                ReportProgress("Mod Installed", 100);
+                ReportProgress("Hack Installed", 100);
                 return true;
             }
 
@@ -815,10 +815,10 @@ namespace reMCenters
             retry:;
                 var systemDllVersion = "";
 
-                var systemDllVersionCheckTaskResult = reMCentersTask.CreateAndRunBasic(() => { systemDllVersion = Methods.DllMethod.GetVersion(); }, "An error occured while fetching system dll version");
+                var systemDllVersionCheckTaskResult = reMCentersTask.CreateAndRunBasic(() => { systemDllVersion = Methods.DllMethod.GetVersion(); }, "Error occured while fetching system DLL version");
                 if (systemDllVersionCheckTaskResult == InvokeResults.errorOccured)
                 {
-                    ReportProgress("Error occured last time while checking system dll version",0);
+                    ReportProgress("Error occured while checking your system's DLL version.",0);
 
 
                     return;
@@ -856,11 +856,11 @@ namespace reMCenters
 
 
 
-                        var DllMethodDownloaderTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Download(), "An error occured while download Dll method");
+                        var DllMethodDownloaderTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Download(), "Error occured while downloading DLLs");
                         if (DllMethodDownloaderTaskResult == InvokeResults.errorOccured)
                         {
                             
-                                ReportProgress( "Error occured last time while downloading cracked dll",0);
+                                ReportProgress( "Error occured while downloading the correct cracked DLLs for your system.",0);
 
                             return;
                         }
@@ -873,12 +873,12 @@ namespace reMCenters
 
 
 
-                    var dllMethodInstallTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Install(), "An error occured while installing dll method");
+                    var dllMethodInstallTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Install(), "Error occured while installing the selected DLL method");
 
                     if (dllMethodInstallTaskResult == InvokeResults.errorOccured)
                     {
                         
-                            ReportProgress("Error occured last time while installing dll method",0);
+                            ReportProgress("Error occured while trying to install your selected DLL method.",0);
 
 
                         return;
@@ -925,10 +925,10 @@ namespace reMCenters
             retry:;
                 var systemDllVersion = "";
 
-                var systemDllVersionCheckTaskResult = reMCentersTask.CreateAndRunBasic(() => { systemDllVersion = GetVersion(); }, "An error occured while fetching system dll version");
+                var systemDllVersionCheckTaskResult = reMCentersTask.CreateAndRunBasic(() => { systemDllVersion = GetVersion(); }, "Error occured while fetching licensing DLL versions");
                 if (systemDllVersionCheckTaskResult == InvokeResults.errorOccured)
                 {
-                    ReportProgress("Error occured last time while checking system dll version", 0);
+                    ReportProgress("Error occured while checking your licensing DLL versions.", 0);
 
 
                     return;
@@ -958,11 +958,11 @@ namespace reMCenters
                     isPlatformSupported = true;
                     return;
                    
-                }, "An error occured while checking platform of DLLs");
+                }, "Error occured while checking system architecture");
                 if (DllMethodAvailabitityCheckerTaskResult == InvokeResults.errorOccured)
                 {
 
-                    ReportProgress("Error occured last time while checking platform of DLLs", 0);
+                    ReportProgress("Error occured while checking system architecture.", 0);
 
                     return;
                 }
@@ -973,11 +973,11 @@ namespace reMCenters
 
                     bool wasPatchSuccess = false;
 
-                        var DllMethodDownloaderTaskResult = reMCentersTask.CreateAndRunBasic(() =>wasPatchSuccess= method.DoAutoPatch(is64), "An error occured while patching DLLs");
+                        var DllMethodDownloaderTaskResult = reMCentersTask.CreateAndRunBasic(() =>wasPatchSuccess= method.DoAutoPatch(is64), "Error occured while patching DLLs");
                         if (DllMethodDownloaderTaskResult == InvokeResults.errorOccured|| wasPatchSuccess==false)
                         {
 
-                            ReportProgress("Error occured last time while creating cracked dll", 0);
+                            ReportProgress("Error occured while creating a patched DLL, to maybe fix this: uninstall the hack, restart your PC, and then try install again.", 0);
 
                             return;
                         }
@@ -990,12 +990,12 @@ namespace reMCenters
 
 
 
-                    var dllMethodInstallTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Install(), "An error occured while installing dll method");
+                    var dllMethodInstallTaskResult = reMCentersTask.CreateAndRunBasic(() => method.Install(), "Error occured while installing the hack");
 
                     if (dllMethodInstallTaskResult == InvokeResults.errorOccured)
                     {
 
-                        ReportProgress("Error occured last time while installing dll method", 0);
+                        ReportProgress("Error occured while installing the hack, to maybe fix this: uninstall the hack, restart your PC, and then try install again.", 0);
 
 
                         return;
@@ -1018,12 +1018,12 @@ namespace reMCenters
             {
 
                
-              var  result = reMCentersTask.CreateAndRunBasic(() => Uninstall(), "An error occured while uninstalling Mod");
+              var  result = reMCentersTask.CreateAndRunBasic(() => Uninstall(), "Error occured while uninstalling hack");
 
                 if (result == InvokeResults.errorOccured)
                 {
                     
-                    ReportProgress("Error occured last time while uninstalling dll method", 0);
+                    ReportProgress("Error occured while uninstalling the hack, try rebooting and try again.", 0);
                 };
 
 
