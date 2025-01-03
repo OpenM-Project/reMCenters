@@ -25,7 +25,7 @@
 
     <!--<Window.Background>
         <RadialGradientBrush>
-            <GradientStop Color="White" Offset="0.003"/>
+            <GradientStop Color="Black" Offset="0.003"/>
             <GradientStop Color="#FFFFFBFB" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>-->

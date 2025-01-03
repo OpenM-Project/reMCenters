@@ -30,9 +30,9 @@
         <Frame x:Name="MainContent" NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
         <Grid x:Name="DialogBox"  Visibility="Hidden" >
             <Grid.Background>
-                <SolidColorBrush Color="WhiteSmoke" Opacity="0.006"/>
+                <SolidColorBrush Color="Black" Opacity="0.006"/>
             </Grid.Background>
-            <Border  Margin="100"  Background="White" BorderThickness="1" BorderBrush="Black" Padding="10">
+            <Border  Margin="100"  Background="Black" BorderThickness="1" BorderBrush="Black" Padding="10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="9*"/>
@@ -77,7 +77,7 @@ fw:RevealElement.BorderRadius="10" Click="DialogOkButton_Click">
                 <RowDefinition Height="121*"/>
             </Grid.RowDefinitions>
             <Border x:Name="notificationBox" Visibility="Hidden" BorderBrush="Black" BorderThickness="1"  Margin="10">
-                <Grid  Background="WhiteSmoke">
+                <Grid  Background="Black">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10*"/>
                         <ColumnDefinition Width="778*"/>
