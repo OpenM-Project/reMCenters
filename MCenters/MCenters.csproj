@@ -263,6 +263,7 @@
     <Resource Include="images\youtube_icon.png" />
     <Resource Include="images\youtube 2.png" />
     <Resource Include="images\options.png" />
+    <Resource Include="images\dark_mode_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

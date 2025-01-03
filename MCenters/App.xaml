@@ -10,11 +10,57 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!--  FluentWPF Controls  -->
                 <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Controls.xaml" />
-                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Blue" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Global Colors -->
+            <Color x:Key="MaterialDesignBackground">#FFFFFF</Color>
+            <SolidColorBrush x:Key="WindowBackground" Color="{DynamicResource MaterialDesignBackground}"/>
+            <SolidColorBrush x:Key="GlobalTextForeground" Color="#000000"/>
+            <SolidColorBrush x:Key="ButtonBackground" Color="#80808080"/>
+            <SolidColorBrush x:Key="AccentColor" Color="#FF4CC2FF"/>
+            
+            <!-- Global Styles -->
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource GlobalTextForeground}"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Foreground" Value="{DynamicResource GlobalTextForeground}"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Foreground" Value="{DynamicResource GlobalTextForeground}"/>
+            </Style>
+            
+            <!-- TextBox Styles -->
+            <Style TargetType="TextBox">
+                <Setter Property="Foreground" Value="{DynamicResource GlobalTextForeground}"/>
+                <Setter Property="Background" Value="{DynamicResource MaterialDesignBackground}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}"/>
+            </Style>
+            
+            <!-- RichTextBox Styles -->
+            <Style TargetType="RichTextBox">
+                <Setter Property="Foreground" Value="{DynamicResource GlobalTextForeground}"/>
+                <Setter Property="Background" Value="{DynamicResource MaterialDesignBackground}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}"/>
+            </Style>
+            
+            <!-- MessageBox Style -->
+            <Style TargetType="materialDesign:DialogHost">
+                <Setter Property="DialogBackground" Value="{DynamicResource MaterialDesignBackground}"/>
+                <Setter Property="DialogTheme" Value="{DynamicResource MaterialDesignTheme}"/>
+            </Style>
+            
+            <!-- Log Box Style -->
+            <Style x:Key="LogBoxStyle" TargetType="Border">
+                <Setter Property="Background" Value="{DynamicResource MaterialDesignBackground}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

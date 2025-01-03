@@ -9,6 +9,7 @@ public class Config
 
     public ModOptions SelectedMod { get; set; }
     private static Config ConfigCache;
+    public bool IsDarkMode { get; set; } = false;
 
     public void Save()
     {

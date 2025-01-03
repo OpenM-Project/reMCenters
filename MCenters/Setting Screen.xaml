@@ -177,5 +177,25 @@
             </local:HoverableButton>
             <Image x:Name="youtubeIcon" Margin="30,10,30,25" Source="/images/youtube_icon.png" IsHitTestVisible="False"  Grid.Row="1" Grid.Column="6"/>
         </Grid>
+        <local:HoverableButton OpacityMask="Magenta" x:Name="darkModeButton" 
+                              Grid.Column="1" Grid.Row="4"
+                              fw:RevealElement.BorderRadius="10"  
+                              Content="Dark Mode"  
+                              Style="{DynamicResource ButtonRoundAccentRevealStyle}" 
+                              VerticalContentAlignment="Bottom"
+                              Width="157" 
+                              Click="DarkModeButton_Click">
+            <fw:RevealElement.MouseOverBackground>
+                <SolidColorBrush Color="#FF4CC2FF" Opacity="0.5"/>
+            </fw:RevealElement.MouseOverBackground>
+            <local:HoverableButton.Background>
+                <SolidColorBrush Color="#80808080" Opacity="0"/>
+            </local:HoverableButton.Background>
+        </local:HoverableButton>
+        <Image x:Name="darkModeIcon" 
+               Grid.Column="1" Grid.Row="4"
+               Margin="20" 
+               Source="/images/dark_mode_icon.png" 
+               IsHitTestVisible="False"/>
     </Grid>
 </Page>

@@ -93,13 +93,13 @@ namespace MCenters
             switch (mod)
             {
                 case ModOptions.DllMethodOnline:
-                    return ("Install Cracked DLL","Uninstall Cracked DLL");
+                    return ("Install Modded DLL", "Uninstall Modded DLL");
                 case ModOptions.DllMethodAutoPatch:
-                    return ("Install Cracked DLL", "Uninstall Cracked DLL");
+                    return ("Install Modded DLL", "Uninstall Modded DLL");
                 case ModOptions.DllMethodAutoPatchNonPermanent:
                     return ("Launch Minecraft", "N/A");
                 case ModOptions.MCenters5:
-                    return ("Launch Minecraft: Full", "Launch Minecraft: Trial");
+                    return ("Launch Full Minecraft", "Launch Trial Minecraft");
                 case ModOptions.HookMethod:
                     return ("Launch Minecraft", "N/A");
 

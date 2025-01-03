@@ -8,7 +8,7 @@
         
         xmlns:local="clr-namespace:MCenters"
         mc:Ignorable="d"
-        Height="450" Width="800" TintColor="#FFD3D3D3" TitleBarMode="Extend" TintOpacity="0.1"
+        Height="450" Width="800" TintColor="{DynamicResource MaterialDesignBackground}" TitleBarMode="Extend" TintOpacity="1"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
@@ -16,9 +16,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}" Effect="{DynamicResource MaterialDesignShadowDepth3}" ResizeMode="CanMinimize"  
                   
           TextElement.Foreground="{DynamicResource MaterialDesign.Brush.Foreground}" WindowStyle="None" AcrylicWindowStyle="NoIcon" Closed="AcrylicWindow_Closed"
-                >
+                NoiseOpacity="0" ExtendViewIntoTitleBar="True" FallbackColor="{DynamicResource MaterialDesignBackground}">
     <fw:AcrylicWindow.Background>
-        <SolidColorBrush Color="#FFFAFAFA" Opacity="0.95"/>
+        <SolidColorBrush Color="{DynamicResource MaterialDesignBackground}"/>
     </fw:AcrylicWindow.Background>
 
 

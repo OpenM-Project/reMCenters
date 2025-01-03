@@ -1,4 +1,5 @@
-﻿using MaterialDesignThemes.Wpf;
+﻿using MaterialDesignColors;
+using MaterialDesignThemes.Wpf;
 using SourceChord.FluentWPF;
 using System;
 using System.Diagnostics;
@@ -29,6 +30,22 @@ namespace MCenters
         public readonly string CurrentVersion = "";
         public MainWindow()
         {            
+            InitializeComponent();
+            var config = Config.Load();
+            if (config.IsDarkMode)
+            {
+                var newTheme = new MaterialDesignThemes.Wpf.BundledTheme()
+                {
+                    BaseTheme = MaterialDesignThemes.Wpf.BaseTheme.Dark,
+                    PrimaryColor = MaterialDesignColors.PrimaryColor.DeepPurple,
+                    SecondaryColor = MaterialDesignColors.SecondaryColor.Blue
+                };
+                Application.Current.Resources.MergedDictionaries[1] = newTheme;
+                Application.Current.Resources["MaterialDesignBackground"] = Color.FromRgb(30, 30, 30);
+                Application.Current.Resources["GlobalTextForeground"] = new SolidColorBrush(Colors.White);
+                Application.Current.Resources["ButtonBackground"] = new SolidColorBrush(Color.FromArgb(128, 40, 40, 40));
+            }
+            
             Screens.InstallScreen = new InstallScreen();
             Screens.UninstallScreen = new InstallScreen
             {
@@ -36,7 +53,6 @@ namespace MCenters
             };
             var versionInfo = Process.GetCurrentProcess().MainModule.FileVersionInfo;
             CurrentVersion = versionInfo.FileVersion;
-            ResourceDictionaryEx.GlobalTheme = ElementTheme.Light;
             InitializeComponent();
             Title = $"reMCenters {versionInfo.FileMajorPart}.{versionInfo.FileMinorPart} Beta";
             

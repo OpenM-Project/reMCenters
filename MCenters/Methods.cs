@@ -290,7 +290,7 @@ namespace MCenters
       
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    var restartAction = new Action(() => Process.Start(new ProcessStartInfo("shutdown", "/r /t 10 /c \"Restarting to uninstall Cracked Dlls\" /soft /d p:4:1")
+                    var restartAction = new Action(() => Process.Start(new ProcessStartInfo("shutdown", "/r /t 10 /c \"Restarting to modified Cracked Dlls\" /soft /d p:4:1")
                     {
                         CreateNoWindow = true,
                         UseShellExecute = false
